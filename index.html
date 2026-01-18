@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurtej Singh Sasia | Portfolio</title>
+    <title>Gurtej Singh Sasia (Jarman) | Portfolio</title>
     
     <style>
         :root {
@@ -25,7 +25,6 @@
             min-height: 100vh;
         }
 
-        /* Marquee Styles */
         .marquee-top { background: rgba(255, 0, 0, 0.6); color: white; padding: 10px; font-weight: bold; border-bottom: 1px solid var(--accent-color); }
         .marquee-bot { background: rgba(0, 128, 0, 0.6); color: white; padding: 10px; font-weight: bold; border-top: 1px solid white; margin-top: auto; }
 
@@ -38,19 +37,33 @@
             margin: 30px auto;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
         }
 
-        h1 { color: var(--accent-color); font-size: 2.5rem; margin: 10px 0; text-shadow: 2px 2px 5px #000; }
+        h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px; text-shadow: 2px 2px 5px #000; }
+        .nickname { color: #00ffcc; font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; text-shadow: 1px 1px 3px #000; }
         
-        /* Progress Bar Style */
         .skill-container { text-align: left; margin: 15px 0; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
-        .progress-bar { background: rgba(255,255,255,0.1); height: 10px; border-radius: 10px; overflow: hidden; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; font-weight: bold; }
+        .progress-bar { background: rgba(255,255,255,0.1); height: 12px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
         .progress-fill { height: 100%; background: linear-gradient(90deg, #ffeb3b, #f44336); transition: width 1.5s; }
 
-        .lang-btn { background: var(--accent-color); color: black; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; margin: 0 5px; }
-        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        .lang-btn { background: var(--accent-color); color: black; border: none; padding: 6px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; margin: 0 5px; transition: 0.3s; }
+        .lang-btn:hover { background: white; transform: scale(1.1); }
+        
+        .contact-btn { 
+            background: #25d366; 
+            color: white; 
+            padding: 14px 30px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            display: inline-block; 
+            margin-top: 25px; 
+            font-weight: bold; 
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+        .contact-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6); }
     </style>
 </head>
 <body>
@@ -64,9 +77,11 @@
         </div>
 
         <h1 id="name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        <p id="bio">DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
+        <div id="nick" class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
+        
+        <p id="bio" style="font-size: 1.1rem;">DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
 
-        <h3 id="skillTitle" style="color: var(--accent-color); margin-top: 25px;">ਮੇਰੀ ਸਿੱਖਣ ਦੀ ਪ੍ਰਗਤੀ (Learning Progress)</h3>
+        <h3 id="skillTitle" style="color: var(--accent-color); margin-top: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); display: inline-block; padding-bottom: 5px;">ਮੇਰੀ ਸਿੱਖਣ ਦੀ ਪ੍ਰਗਤੀ (Learning Progress)</h3>
 
         <div class="skill-container">
             <div class="skill-info"><span>HTML5 & Web Design</span><span>65%</span></div>
@@ -93,6 +108,7 @@
             const data = {
                 'pa': {
                     'name': 'ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ',
+                    'nick': '(ਜਰਮਨ ਸਿੰਘ)',
                     'bio': 'DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।',
                     'skillT': 'ਮੇਰੀ ਸਿੱਖਣ ਦੀ ਪ੍ਰਗਤੀ (Learning Progress)',
                     'mTop': "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!",
@@ -100,6 +116,7 @@
                 },
                 'en': {
                     'name': 'Gurtej Singh Sasia',
+                    'nick': '(Jarman Singh)',
                     'bio': 'DCA Student & Future Web Developer.',
                     'skillT': 'My Learning Progress',
                     'mTop': "Welcome to my official website!",
@@ -107,11 +124,7 @@
                 }
             };
             document.getElementById('name').innerText = data[lang].name;
+            document.getElementById('nick').innerText = data[lang].nick;
             document.getElementById('bio').innerText = data[lang].bio;
             document.getElementById('skillTitle').innerText = data[lang].skillT;
-            document.getElementById('mTop').innerText = data[lang].mTop;
-            document.getElementById('mBot').innerText = data[lang].mBot;
-        }
-    </script>
-</body>
-</html>
+            document.getElementById('mTop').innerText = data[lang].mTop
