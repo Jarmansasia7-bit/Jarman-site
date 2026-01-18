@@ -3,106 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurtej Singh Sasia | Professional Portfolio</title>
+    <title>Gurtej Singh Sasia | Portfolio</title>
     
     <style>
         :root {
-            --primary-color: #ffeb3b;
-            --secondary-color: #25d366;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --primary-color: #ffffff; /* ਚਿੱਟਾ ਰੰਗ */
+            --accent-color: #ffeb3b;  /* ਪੀਲਾ ਰੰਗ ਹਾਈਲਾਈਟ ਲਈ */
+            --bg-overlay: rgba(0, 0, 0, 0.8); /* ਗੂੜ੍ਹਾ ਪਿਛੋਕੜ */
         }
 
-    body {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                      url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    /* ਬਾਕੀ ਕੋਡ ਸੇਮ ਰਹੇਗਾ */
-}
+        body {
+            /* ਇੱਥੇ ਮੈਂ ਕੋਡਿੰਗ ਵਾਲੀ ਫੋਟੋ ਲਗਾ ਦਿੱਤੀ ਹੈ */
+            background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
+                              url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+        }
 
-        /* Modern Glass Design */
         .container {
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.1); /* ਹਲਕਾ ਸ਼ੀਸ਼ੇ ਵਰਗਾ ਪ੍ਰਭਾਵ */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 40px;
-            border-radius: 30px;
+            border-radius: 20px;
             text-align: center;
-            max-width: 700px;
-            margin: 40px auto;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         h1 {
-            color: var(--primary-color);
+            color: var(--accent-color);
             font-size: 3rem;
-            margin: 0;
-            letter-spacing: 1px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,1); /* ਅੱਖਰਾਂ ਦੇ ਪਿੱਛੇ ਗੂੜ੍ਹਾ ਪਰਛਾਵਾਂ */
+            margin-bottom: 10px;
         }
 
-        .nickname { color: #4db6ac; font-size: 1.2rem; margin-bottom: 20px; }
+        .nickname {
+            color: #00ffcc;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        }
 
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 25px 0;
+        .bio, .goal-box {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgba(0,0,0,1);
+            margin: 20px 0;
         }
 
         .skill-box {
-            background: var(--glass-bg);
-            padding: 15px;
-            border-radius: 15px;
-            border: 1px solid var(--glass-border);
-            transition: 0.3s;
-        }
-
-        .skill-box:hover {
-            background: var(--primary-color);
-            color: black;
-            transform: scale(1.05);
-        }
-
-        /* Buttons */
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .contact-btn {
-            background: var(--secondary-color);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--accent-color);
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 8px;
+            color: var(--accent-color);
             font-weight: bold;
-            transition: 0.3s;
+        }
+
+        marquee {
+            background: rgba(255, 255, 0, 0.1);
+            color: var(--accent-color);
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.2rem;
         }
 
         .lang-btn {
-            background: transparent;
-            border: 1px solid white;
-            color: white;
+            background: var(--accent-color);
+            color: black;
+            border: none;
             padding: 8px 15px;
             border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
         }
 
-        .lang-btn:hover { background: white; color: black; }
-
-        marquee { padding: 10px; font-weight: bold; background: rgba(0,0,0,0.5); }
+        .contact-btn {
+            background: #25d366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -110,7 +107,7 @@
     <marquee id="mTop">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!</marquee>
 
     <div class="container">
-        <div style="text-align: right; margin-bottom: 10px;">
+        <div style="margin-bottom: 20px;">
             <button class="lang-btn" onclick="changeLang('pa')">ਪੰਜਾਬੀ</button>
             <button class="lang-btn" onclick="changeLang('en')">English</button>
         </div>
@@ -119,27 +116,24 @@
         <div id="nick" class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
         
         <div id="bio" class="bio">
-            ਮੈਂ ਵਰਤਮਾਨ ਵਿੱਚ <strong>DCA (Diploma in Computer Applications)</strong> ਦਾ ਕੋਰਸ ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ ਮੈਨੂੰ ਵੈੱਬ ਡਿਵੈਲਪਮੈਂਟ ਦਾ ਬਹੁਤ ਜਨੂੰਨ ਹੈ।
+            ਮੈਂ ਵਰਤਮਾਨ ਵਿੱਚ <strong>DCA</strong> ਦਾ ਕੋਰਸ ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ ਮੈਨੂੰ ਵੈੱਬ ਡਿਵੈਲਪਮੈਂਟ ਦਾ ਬਹੁਤ ਜਨੂੰਨ ਹੈ।
         </div>
 
-        <h3 id="skillTitle">ਮੇਰੀਆਂ ਕਾਬਲੀਅਤਾਂ (Skills)</h3>
-        <div class="skills-container">
-            <div class="skill-box">HTML5 & CSS3</div>
-            <div class="skill-box">JavaScript basics</div>
-            <div class="skill-box">MS Office (DCA)</div>
-            <div class="skill-box">Computer Networking</div>
+        <div class="skills">
+            <div class="skill-box">HTML5</div>
+            <div class="skill-box">CSS3</div>
+            <div class="skill-box">DCA</div>
+            <div class="skill-box">JavaScript</div>
         </div>
 
-        <div id="goal" style="font-style: italic; color: #ddd; margin: 20px 0;">
+        <div id="goal" class="goal-box">
             "ਮੈਂ ਭਵਿੱਖ ਵਿੱਚ ਇੱਕ ਕਾਮਯਾਬ ਵੈੱਬ ਡਿਵੈਲਪਰ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ।"
         </div>
 
-        <div class="btn-group">
-            <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp ਮੈਸੇਜ ਕਰੋ</a>
-        </div>
+        <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Contact</a>
     </div>
 
-    <marquee id="mBot" direction="right">ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਧੰਨਵਾਦ! ਚੰਡੀਗੜ੍ਹ/ਮੋਹਾਲੀ ਵਿੱਚ ਨੌਕਰੀ ਦੇ ਮੌਕਿਆਂ ਲਈ ਸੰਪਰਕ ਕਰੋ।</marquee>
+    <marquee id="mBot" direction="right">ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਧੰਨਵਾਦ!</marquee>
 
     <script>
         function changeLang(lang) {
@@ -148,25 +142,22 @@
                     'name': 'ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ',
                     'nick': '(ਜਰਮਨ ਸਿੰਘ)',
                     'bio': 'ਮੈਂ ਵਰਤਮਾਨ ਵਿੱਚ <strong>DCA</strong> ਦਾ ਕੋਰਸ ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ ਮੈਨੂੰ ਵੈੱਬ ਡਿਵੈਲਪਮੈਂਟ ਦਾ ਬਹੁਤ ਜਨੂੰਨ ਹੈ।',
-                    'skillT': 'ਮੇਰੀਆਂ ਕਾਬਲੀਅਤਾਂ (Skills)',
-                    'goal': '"ਮੈਂ ਭਵਿੱਖ ਵਿੱਚ ਇੱਕ ਕਾਮਯਾਬ ਵੈੱਬ ਡਿਵੈਲਪਰ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ। Icons"',
+                    'goal': '"ਮੈਂ ਭਵਿੱਖ ਵਿੱਚ ਇੱਕ ਕਾਮਯਾਬ ਵੈੱਬ ਡਿਵੈਲਪਰ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ।"',
                     'mTop': "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!",
-                    'mBot': 'ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਧੰਨਵਾਦ! ਚੰਡੀਗੜ੍ਹ/ਮੋਹਾਲੀ ਵਿੱਚ ਨੌਕਰੀ ਦੇ ਮੌਕਿਆਂ ਲਈ ਸੰਪਰਕ ਕਰੋ।'
+                    'mBot': 'ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਧੰਨਵਾਦ!'
                 },
                 'en': {
                     'name': 'Gurtej Singh Sasia',
                     'nick': '(Jarman Singh)',
                     'bio': 'I am pursuing <strong>DCA</strong> and I am passionate about Web Development.',
-                    'skillT': 'My Professional Skills',
-                    'goal': '"My goal is to become a high-level Web Developer."',
-                    'mTop': "Welcome to my Professional Portfolio!",
-                    'mBot': 'Thanks for visiting! Open for opportunities in Chandigarh/Mohali.'
+                    'goal': '"My goal is to become a professional Web Developer."',
+                    'mTop': "Welcome to my official website!",
+                    'mBot': 'Thanks for visiting my website!'
                 }
             };
             document.getElementById('name').innerText = data[lang].name;
             document.getElementById('nick').innerText = data[lang].nick;
             document.getElementById('bio').innerHTML = data[lang].bio;
-            document.getElementById('skillTitle').innerText = data[lang].skillT;
             document.getElementById('goal').innerText = data[lang].goal;
             document.getElementById('mTop').innerText = data[lang].mTop;
             document.getElementById('mBot').innerText = data[lang].mBot;
