@@ -1,135 +1,64 @@
 <!DOCTYPE html>
 <html lang="pa">
 <head>
-    <meta name="google-site-verification" content="4etFa_4qqolQcTFbJKSD8MGKrptJtMEoo6L1OeWLr3I" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurtej Singh Sasia (Jarman) | Portfolio</title>
+    <meta name="description" content="Official Portfolio of Gurtej Singh Sasia (Jarman). DCA Student and Web Developer.">
     
     <style>
-        :root {
-            --accent-color: #ffeb3b;
-            --bg-overlay: rgba(0, 0, 0, 0.85);
-        }
-
+        :root { --accent-color: #ffeb3b; --bg-overlay: rgba(0, 0, 0, 0.85); }
         body {
             background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
                               url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-size: cover; background-position: center; background-attachment: fixed;
+            margin: 0; font-family: 'Poppins', Arial, sans-serif; color: #ffffff;
+            display: flex; flex-direction: column; min-height: 100vh;
         }
-        
-<div style="margin: 20px 0; font-family: Arial;">
-    <p style="font-size: 0.9rem; color: #ffeb3b; margin-bottom: 5px;">ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ:</p>
-    <img src="https://profile-counter.glitch.me/jarmansasia7-bit/count.svg" alt="Visitor Count" />
-</div>
-        .marquee-top { background: rgba(255, 0, 0, 0.6); color: white; padding: 10px; font-weight: bold; border-bottom: 1px solid var(--accent-color); }
-        .marquee-bot { background: rgba(0, 128, 0, 0.6); color: white; padding: 10px; font-weight: bold; border-top: 1px solid white; margin-top: auto; }
-
+        .marquee-top { background: rgba(255, 0, 0, 0.6); color: white; padding: 10px; font-weight: bold; }
+        .marquee-bot { background: rgba(0, 128, 0, 0.6); color: white; padding: 10px; font-weight: bold; margin-top: auto; }
         .container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            padding: 30px;
-            border-radius: 25px;
-            max-width: 650px;
-            margin: 30px auto;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+            padding: 30px; border-radius: 25px; max-width: 650px; margin: 30px auto;
+            text-align: center; border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px; text-shadow: 2px 2px 5px #000; }
-        .nickname { color: #00ffcc; font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; text-shadow: 1px 1px 3px #000; }
-        
+        h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px; }
+        .nickname { color: #00ffcc; font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; }
         .skill-container { text-align: left; margin: 15px 0; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; font-weight: bold; }
-        .progress-bar { background: rgba(255,255,255,0.1); height: 12px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
+        .progress-bar { background: rgba(255,255,255,0.1); height: 10px; border-radius: 10px; overflow: hidden; }
         .progress-fill { height: 100%; background: linear-gradient(90deg, #ffeb3b, #f44336); transition: width 1.5s; }
-
-        .lang-btn { background: var(--accent-color); color: black; border: none; padding: 6px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; margin: 0 5px; transition: 0.3s; }
-        .lang-btn:hover { background: white; transform: scale(1.1); }
-        
-        .contact-btn { 
-            background: #25d366; 
-            color: white; 
-            padding: 14px 30px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            display: inline-block; 
-            margin-top: 25px; 
-            font-weight: bold; 
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-            transition: 0.3s;
-        }
-        .contact-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6); }
+        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        .counter-section { margin: 20px 0; text-align: center; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 10px; }
     </style>
 </head>
 <body>
 
-    <marquee id="mTop" class="marquee-top">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!</marquee>
+    <marquee class="marquee-top">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!</marquee>
 
     <div class="container">
-        <div style="text-align: right; margin-bottom: 15px;">
-            <button class="lang-btn" onclick="changeLang('pa')">ਪੰਜਾਬੀ</button>
-            <button class="lang-btn" onclick="changeLang('en')">English</button>
-        </div>
-
-        <h1 id="name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        <div id="nick" class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
-        
-        <p id="bio" style="font-size: 1.1rem;">DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
-
-        <h3 id="skillTitle" style="color: var(--accent-color); margin-top: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); display: inline-block; padding-bottom: 5px;">ਮੇਰੀ ਸਿੱਖਣ ਦੀ ਪ੍ਰਗਤੀ (Learning Progress)</h3>
+        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <div class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
+        <p>DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
 
         <div class="skill-container">
             <div class="skill-info"><span>HTML5 & Web Design</span><span>65%</span></div>
             <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
         </div>
-
         <div class="skill-container">
             <div class="skill-info"><span>MS Word (DCA)</span><span>50%</span></div>
             <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
         </div>
 
-        <div class="skill-container">
-            <div class="skill-info"><span>CSS3 Styling</span><span>40%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
-        </div>
-
         <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Contact</a>
+
+        <div class="counter-section">
+            <p style="font-size: 0.8rem; color: #ffeb3b; margin-bottom: 5px;">ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ:</p>
+            <img src="https://profile-counter.glitch.me/jarmansasia7-bit/count.svg" alt="Visitor Count" />
+        </div>
     </div>
 
-    <marquee id="mBot" class="marquee-bot" direction="right">ਮੇਰੀ ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਤੁਹਾਡਾ ਬਹੁਤ-ਬਹੁਤ ਧੰਨਵਾਦ!</marquee>
+    <marquee class="marquee-bot" direction="right">ਮੇਰੀ ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਤੁਹਾਡਾ ਬਹੁਤ-ਬਹੁਤ ਧੰਨਵਾਦ!</marquee>
 
-    <script>
-        function changeLang(lang) {
-            const data = {
-                'pa': {
-                    'name': 'ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ',
-                    'nick': '(ਜਰਮਨ ਸਿੰਘ)',
-                    'bio': 'DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।',
-                    'skillT': 'ਮੇਰੀ ਸਿੱਖਣ ਦੀ ਪ੍ਰਗਤੀ (Learning Progress)',
-                    'mTop': "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!",
-                    'mBot': 'ਮੇਰੀ ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਤੁਹਾਡਾ ਬਹੁਤ-ਬਹੁਤ ਧੰਨਵਾਦ!'
-                },
-                'en': {
-                    'name': 'Gurtej Singh Sasia',
-                    'nick': '(Jarman Singh)',
-                    'bio': 'DCA Student & Future Web Developer.',
-                    'skillT': 'My Learning Progress',
-                    'mTop': "Welcome to my official website!",
-                    'mBot': 'Thank you so much for visiting my website!'
-                }
-            };
-            document.getElementById('name').innerText = data[lang].name;
-            document.getElementById('nick').innerText = data[lang].nick;
-            document.getElementById('bio').innerText = data[lang].bio;
-            document.getElementById('skillTitle').innerText = data[lang].skillT;
-            document.getElementById('mTop').innerText = data[lang].mTop
+</body>
+</html>
