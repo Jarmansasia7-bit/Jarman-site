@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurtej Singh Sasia (Jarman) | Portfolio</title>
-    <meta name="description" content="Official Portfolio of Gurtej Singh Sasia (Jarman). DCA Student and Web Developer.">
-    
     <style>
         :root { --accent-color: #ffeb3b; --bg-overlay: rgba(0, 0, 0, 0.85); }
         body {
@@ -19,17 +17,19 @@
         .marquee-bot { background: rgba(0, 128, 0, 0.6); color: white; padding: 10px; font-weight: bold; margin-top: auto; }
         .container {
             background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-            padding: 30px; border-radius: 25px; max-width: 650px; margin: 30px auto;
+            padding: 30px; border-radius: 25px; max-width: 400px; margin: 30px auto;
             text-align: center; border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px; }
-        .nickname { color: #00ffcc; font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; }
+        h1 { color: var(--accent-color); font-size: 2rem; margin-bottom: 5px; }
+        .nickname { color: #00ffcc; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; }
         .skill-container { text-align: left; margin: 15px 0; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
-        .progress-bar { background: rgba(255,255,255,0.1); height: 10px; border-radius: 10px; overflow: hidden; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #ffeb3b, #f44336); transition: width 1.5s; }
-        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
-        .counter-section { margin: 20px 0; text-align: center; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 10px; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.8rem; }
+        .progress-bar { background: rgba(255,255,255,0.1); height: 8px; border-radius: 10px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #ffeb3b, #f44336); }
+        .contact-btn { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; font-size: 0.9rem; }
+        
+        /* New Counter Styling */
+        .counter-box { margin-top: 20px; padding: 10px; background: rgba(0,0,0,0.5); border-radius: 15px; border: 1px solid var(--accent-color); }
     </style>
 </head>
 <body>
@@ -39,7 +39,7 @@
     <div class="container">
         <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
         <div class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
-        <p>DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
+        <p style="font-size: 0.9rem;">DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
 
         <div class="skill-container">
             <div class="skill-info"><span>HTML5 & Web Design</span><span>65%</span></div>
@@ -52,9 +52,9 @@
 
         <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Contact</a>
 
-        <div class="counter-section">
-            <p style="font-size: 0.8rem; color: #ffeb3b; margin-bottom: 5px;">ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ:</p>
-            <img src="https://profile-counter.glitch.me/jarmansasia7-bit/count.svg" alt="Visitor Count" />
+        <div class="counter-box">
+            <p style="font-size: 0.7rem; color: var(--accent-color); margin-bottom: 5px;">ਕੁੱਲ ਵਿਜ਼ਿਟਰ (Total Visitors):</p>
+            <img src="https://hitwebcounter.com/counter/counter.php?page=9645281&style=0005&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" />
         </div>
     </div>
 
