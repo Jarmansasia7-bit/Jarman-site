@@ -11,101 +11,112 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurtej Singh Sasia (Jarman) | Portfolio</title>
+    <title>Gurtej Singh Sasia | Services</title>
     
-    <meta name="description" content="Official Portfolio of Gurtej Singh Sasia (Jarman). DCA Student and Web Developer.">
-    <meta name="google-site-verification" content="google93c2e684073362a2">
-
     <style>
-        :root { 
-            --accent-color: #ffeb3b; 
-            --bg-overlay: rgba(0, 0, 0, 0.85); 
-        }
+        :root { --accent-color: #ffeb3b; --bg-overlay: rgba(0, 0, 0, 0.9); }
         body {
             background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
-                              url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            margin: 0; 
-            font-family: 'Poppins', Arial, sans-serif; 
-            color: #ffffff;
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh;
+                              url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            margin: 0; font-family: 'Poppins', Arial, sans-serif; color: #ffffff;
+            display: flex; flex-direction: column; align-items: center;
         }
-        .marquee-top { background: rgba(255, 0, 0, 0.6); color: white; padding: 10px; font-weight: bold; }
-        .marquee-bot { background: rgba(0, 128, 0, 0.6); color: white; padding: 10px; font-weight: bold; margin-top: auto; }
-        
+        .lang-switch { margin-top: 20px; }
+        .lang-btn { 
+            background: rgba(255,255,255,0.2); border: 1px solid white; color: white; 
+            padding: 5px 15px; cursor: pointer; border-radius: 5px; margin: 0 5px;
+        }
+        .lang-btn.active { background: var(--accent-color); color: black; font-weight: bold; }
+
         .container {
-            background: rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(15px);
-            padding: 30px; 
-            border-radius: 25px; 
-            max-width: 400px; 
-            margin: 30px auto;
-            text-align: center; 
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+            padding: 30px; border-radius: 25px; max-width: 450px; width: 90%;
+            margin: 20px auto; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        h1 { color: var(--accent-color); font-size: 2rem; margin-bottom: 5px; }
-        .nickname { color: #00ffcc; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; }
-        
-        .skill-container { text-align: left; margin: 15px 0; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.8rem; }
-        .progress-bar { background: rgba(255,255,255,0.1); height: 8px; border-radius: 10px; overflow: hidden; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #ffeb3b, #f44336); transition: width 1.5s ease-in-out; }
-        
-        .contact-btn { 
-            background: #25d366; 
-            color: white; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            display: inline-block; 
-            margin-top: 20px; 
-            font-weight: bold; 
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-        
-        .counter-box { 
-            margin-top: 25px; 
-            padding: 15px; 
-            background: rgba(0,0,0,0.4); 
-            border-radius: 15px; 
-            border: 1px solid rgba(255, 235, 59, 0.3); 
-        }
+        h1 { color: var(--accent-color); margin-bottom: 5px; }
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; text-align: left; }
+        .service-card { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; border-left: 3px solid var(--accent-color); }
+        .service-card h3 { font-size: 0.9rem; margin: 0; color: #00ffcc; }
+        .service-card p { font-size: 0.7rem; margin: 5px 0 0; }
+        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        .counter-box { margin-top: 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <marquee class="marquee-top">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ!</marquee>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="changeLang('pa')">ਪੰਜਾਬੀ</button>
+        <button class="lang-btn" onclick="changeLang('en')">English</button>
+    </div>
 
     <div class="container">
-        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        <div class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
-        <p style="font-size: 0.9rem; opacity: 0.9;">DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਭਵਿੱਖ ਦਾ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
-
-        <div class="skill-container">
-            <div class="skill-info"><span>HTML5 & Web Design</span><span>65%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+        <h1 id="main-name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <p id="sub-title" style="color: #00ffcc; font-weight: bold;">Professional Services</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 id="s1-t">Resume Design</h3>
+                <p id="s1-d">ਨੌਕਰੀ ਲਈ ਵਧੀਆ ਰਿਜ਼ਿਊਮ ਬਣਵਾਓ।</p>
+            </div>
+            <div class="service-card">
+                <h3 id="s2-t">Data Entry</h3>
+                <p id="s2-d">Excel ਅਤੇ Word ਵਿੱਚ ਡਾਟਾ ਐਂਟਰੀ।</p>
+            </div>
+            <div class="service-card">
+                <h3 id="s3-t">Online Forms</h3>
+                <p id="s3-d">ਹਰ ਤਰ੍ਹਾਂ ਦੇ ਆਨਲਾਈਨ ਫਾਰਮ ਭਰੋ।</p>
+            </div>
+            <div class="service-card">
+                <h3 id="s4-t">Punjabi Typing</h3>
+                <p id="s4-d">ਸਹੀ ਅਤੇ ਤੇਜ਼ ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ।</p>
+            </div>
         </div>
-        <div class="skill-container">
-            <div class="skill-info"><span>MS Word (DCA)</span><span>50%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
-        </div>
 
-        <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Contact</a>
+        <p id="contact-text" style="margin-top:20px; font-size:0.8rem;">ਕੋਈ ਵੀ ਕੰਮ ਕਰਵਾਉਣ ਲਈ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ:</p>
+        <a href="https://wa.me/918146014073" id="whatsapp-btn" class="contact-btn">Hire Me (WhatsApp)</a>
 
         <div class="counter-box">
-            <p style="font-size: 0.75rem; color: var(--accent-color); margin-bottom: 8px; letter-spacing: 1px;">TOTAL VISITORS</p>
-            <img src="https://hitwebcounter.com/counter/counter.php?page=9645281&style=0005&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" />
+            <p id="visitor-text">ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਵਾਲੇ:</p>
+            <img src="https://hitwebcounter.com/counter/counter.php?page=9645281&style=0005&nbdigits=5&type=page&initCount=0" border="0" />
         </div>
     </div>
 
-    <marquee class="marquee-bot" direction="right">ਮੇਰੀ ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਤੁਹਾਡਾ ਬਹੁਤ-ਬਹੁਤ ਧੰਨਵਾਦ!</marquee>
+    <script>
+        function changeLang(lang) {
+            const btns = document.querySelectorAll('.lang-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if(lang === 'en') {
+                document.getElementById('main-name').innerText = "Gurtej Singh Sasia";
+                document.getElementById('sub-title').innerText = "Professional Services";
+                document.getElementById('s1-t').innerText = "Resume Design";
+                document.getElementById('s1-d').innerText = "Professional resumes for your job.";
+                document.getElementById('s2-t').innerText = "Data Entry";
+                document.getElementById('s2-d').innerText = "Data entry in Excel and MS Word.";
+                document.getElementById('s3-t').innerText = "Online Forms";
+                document.getElementById('s3-d').innerText = "Filling all types of online forms.";
+                document.getElementById('s4-t').innerText = "Punjabi Typing";
+                document.getElementById('s4-d').innerText = "Fast and accurate Punjabi typing.";
+                document.getElementById('contact-text').innerText = "To hire any service, click the button below:";
+                document.getElementById('visitor-text').innerText = "Total Visitors:";
+            } else {
+                document.getElementById('main-name').innerText = "ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ";
+                document.getElementById('sub-title').innerText = "Professional Services";
+                document.getElementById('s1-t').innerText = "Resume Design";
+                document.getElementById('s1-d').innerText = "ਨੌਕਰੀ ਲਈ ਵਧੀਆ ਰਿਜ਼ਿਊਮ ਬਣਵਾਓ।";
+                document.getElementById('s2-t').innerText = "Data Entry";
+                document.getElementById('s2-d').innerText = "Excel ਅਤੇ Word ਵਿੱਚ ਡਾਟਾ ਐਂਟਰੀ।";
+                document.getElementById('s3-t').innerText = "Online Forms";
+                document.getElementById('s3-d').innerText = "ਹਰ ਤਰ੍ਹਾਂ ਦੇ ਆਨਲਾਈਨ ਫਾਰਮ ਭਰੋ।";
+                document.getElementById('s4-t').innerText = "Punjabi Typing";
+                document.getElementById('s4-d').innerText = "ਸਹੀ ਅਤੇ ਤੇਜ਼ ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ।";
+                document.getElementById('contact-text').innerText = "ਕੋਈ ਵੀ ਕੰਮ ਕਰਵਾਉਣ ਲਈ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ:";
+                document.getElementById('visitor-text').innerText = "ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਵਾਲੇ:";
+            }
+        }
+    </script>
 
 </body>
 </html>
