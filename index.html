@@ -19,79 +19,65 @@
             background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
                               url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
             background-size: cover; background-position: center; background-attachment: fixed;
-            margin: 0; font-family: Arial, sans-serif; color: #ffffff;
+            margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #ffffff;
             display: flex; flex-direction: column; align-items: center;
-            min-height: 100vh;
         }
         .marquee-top { background: #d32f2f; color: white; padding: 10px; width: 100%; font-weight: bold; position: fixed; top: 0; z-index: 1000; }
-        .lang-switch { margin-top: 65px; margin-bottom: 10px; z-index: 100; }
-        .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 6px 18px; cursor: pointer; border-radius: 8px; margin: 0 5px; font-weight: bold; }
-        .lang-btn.active { background: var(--accent-color); color: black; }
         
-        /* ਮੇਨ ਕਾਰਡ ਜਿਹੜਾ ਗਾਇਬ ਹੋ ਰਿਹਾ ਸੀ */
         .container { 
-            background: rgba(30, 30, 30, 0.95); 
-            padding: 25px; border-radius: 25px; max-width: 450px; width: 90%; 
-            margin: 15px auto; text-align: center; border: 2px solid var(--accent-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            display: block !important;
+            background: rgba(20, 20, 20, 0.95); 
+            padding: 25px; border-radius: 20px; max-width: 480px; width: 90%; 
+            margin: 70px auto 20px auto; text-align: center; border: 1px solid #333;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
         }
         h1 { color: var(--accent-color); margin-bottom: 5px; font-size: 1.8rem; }
         .section-title { font-size: 1.2rem; color: var(--accent-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; margin: 25px 0 15px 0; }
         
-        .blog-box { text-align: left; }
-        .blog-post { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; margin-bottom: 20px; border-left: 4px solid var(--accent-color); }
-        .blog-post h3 { font-size: 1.15rem; color: #00ffcc; margin: 0 0 10px 0; }
-        .blog-post p { font-size: 0.95rem; margin: 8px 0; color: #eee; line-height: 1.6; }
+        .blog-post { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; margin-bottom: 20px; text-align: left; border-left: 4px solid var(--accent-color); }
+        .blog-post h3 { color: #00ffcc; margin: 0 0 10px 0; font-size: 1.1rem; }
+        .blog-post p { font-size: 0.95rem; line-height: 1.6; color: #ddd; }
 
         .yt-link-btn { 
-            background: #ff0000; color: white !important; padding: 12px 20px; 
-            text-decoration: none; border-radius: 10px; font-size: 0.95rem; 
+            background: #ff0000; color: white !important; padding: 10px 18px; 
+            text-decoration: none; border-radius: 8px; font-size: 0.9rem; 
             display: inline-block; font-weight: bold; margin-top: 10px;
         }
         
+        .map-box { border-radius: 15px; overflow: hidden; border: 1px solid #444; margin-top: 10px; }
         .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
-        .counter-box { margin-top: 25px; background: #000; padding: 10px; border-radius: 12px; border: 1px solid var(--accent-color); display: inline-block; }
-        .disclaimer { font-size: 0.75rem; color: #bbb; margin-top: 25px; padding-top: 15px; border-top: 1px solid #444; text-align: justify; }
+        .counter-box { margin-top: 25px; padding: 10px; background: #000; border-radius: 10px; border: 1px solid var(--accent-color); display: inline-block; }
     </style>
 </head>
 <body>
 
-    <marquee class="marquee-top">ਜੀ ਆਇਆਂ ਨੂੰ! ਇੱਥੇ ਪੜ੍ਹੋ ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰਿਵਿਊ ਅਤੇ ਕੰਪਿਊਟਰ ਕੋਰਸਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ।</marquee>
-
-    <div class="lang-switch">
-        <button class="lang-btn active" id="btn-pa" onclick="changeLang('pa')">ਪੰਜਾਬੀ</button>
-        <button class="lang-btn" id="btn-en" onclick="changeLang('en')">English</button>
-    </div>
+    <marquee class="marquee-top">ਜੀ ਆਇਆਂ ਨੂੰ! ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰਿਵਿਊ ਅਤੇ ਕੰਪਿਊਟਰ ਟਿਪਸ ਲਈ ਹੇਠਾਂ ਦੇਖੋ।</marquee>
 
     <div class="container">
-        <h1 id="main-name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        <p id="sub-nick" style="color: #00ffcc; font-weight: bold; margin-top:0;">(ਜਰਮਨ ਸਿੰਘ)</p>
+        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <p style="color: #00ffcc; font-weight: bold; margin-top:0;">(ਜਰਮਨ ਸਿੰਘ)</p>
 
-        <h2 class="section-title" id="blog-title">Latest Blogs (ਲੇਖ)</h2>
+        <h2 class="section-title">Latest Blogs (ਲੇਖ)</h2>
 
-        <div class="blog-box">
-            <div class="blog-post">
-                <h3 id="b1-h">1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh)</h3>
-                <p id="b1-p">ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਇਸ ਵਿੱਚ 18ਵੀਂ ਸਦੀ ਦੇ ਪੰਜਾਬ ਦਾ ਸੱਭਿਆਚਾਰ ਅਤੇ ਉਸ ਸਮੇਂ ਦੇ ਹਾਲਾਤਾਂ ਨੂੰ ਬਹੁਤ ਵਧੀਆ ਤਰੀਕੇ ਨਾਲ ਦਿਖਾਇਆ ਗਿਆ ਹੈ।</p>
-                <a href="https://www.youtube.com/results?search_query=Maurh+Official+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
-            </div>
-
-            <div class="blog-post">
-                <h3 id="b2-h">2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
-                <p id="b2-p">ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਵਿੱਚ ਇੱਕ ਹੋਰ ਦਮਦਾਰ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਰਿਲੀਜ਼ ਹੋਈ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਐਕਸ਼ਨ ਅਤੇ ਡਰਾਮੇ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਗੈਂਗਸਟਰ ਕਲਚਰ ਅਤੇ ਸਿਸਟਮ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਘੁੰਮਦੀ ਹੈ। ਇਸ ਫ਼ਿਲਮ ਦੇ ਡਾਇਲਾਗ ਅਤੇ ਐਕਸ਼ਨ ਸੀਨ ਬਹੁਤ ਵਧੀਆ ਹਨ।</p>
-                <a href="https://www.youtube.com/results?search_query=Makoka+Punjabi+Movie+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
-            </div>
-
-            <div class="blog-post">
-                <h3 id="b3-h">3. DCA ਕੋਰਸ ਨਾਲ ਕਮਾਈ ਦੇ ਤਰੀਕੇ</h3>
-                <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਕਰਕੇ ਤੁਸੀਂ ਕਈ ਤਰੀਕਿਆਂ ਨਾਲ ਪੈਸੇ ਕਮਾ ਸਕਦੇ ਹੋ। MS Word ਰਾਹੀਂ ਪ੍ਰੋਫੈਸ਼ਨਲ ਰਿਜ਼ਿਊਮ ਬਣਾਉਣਾ, Excel ਵਿੱਚ ਡਾਟਾ ਐਂਟਰੀ ਕਰਨਾ, ਅਤੇ ਪੰਜਾਬੀ-ਅੰਗਰੇਜ਼ੀ ਟਾਈਪਿੰਗ ਵਰਗੇ ਕੰਮ ਅੱਜ-ਕੱਲ੍ਹ ਬਹੁਤ ਮੰਗ ਵਿੱਚ ਹਨ।</p>
-            </div>
+        <div class="blog-post">
+            <h3>1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh)</h3>
+            <p>ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਇਸ ਵਿੱਚ 18ਵੀਂ ਸਦੀ ਦੇ ਪੰਜਾਬ ਦਾ ਸੱਭਿਆਚਾਰ ਦਿਖਾਇਆ ਗਿਆ ਹੈ।</p>
+            <a href="https://www.youtube.com/results?search_query=Maurh+Official+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
         </div>
 
-        <h2 class="section-title" id="loc-title">My Location</h2>
-        <div style="border-radius: 15px; overflow: hidden; border: 1px solid var(--accent-color);">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.811822769018!2d75.1481105!3d31.3917711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDIzJzMwLjQiTiA3NcKwMDgnNTMuMiJF!5e0!3m2!1sen!2sin!4v1705820000000" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="blog-post">
+            <h3>2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
+            <p>ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਵਿੱਚ ਇੱਕ ਹੋਰ ਦਮਦਾਰ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਰਿਲੀਜ਼ ਹੋਈ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਐਕਸ਼ਨ ਅਤੇ ਡਰਾਮੇ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਗੈਂਗਸਟਰ ਕਲਚਰ ਅਤੇ ਸਿਸਟਮ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਘੁੰਮਦੀ ਹੈ।</p>
+            <a href="https://www.youtube.com/results?search_query=Makoka+Punjabi+Movie+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
+        </div>
+
+        <div class="blog-post">
+            <h3>3. DCA ਕੋਰਸ ਨਾਲ ਕਮਾਈ ਦੇ ਤਰੀਕੇ</h3>
+            <p>ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਕਰਕੇ ਤੁਸੀਂ MS Word, Excel ਅਤੇ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਵਧੀਆ ਪੈਸੇ ਕਮਾ ਸਕਦੇ ਹੋ। ਰਿਜ਼ਿਊਮ ਬਣਾਉਣਾ ਅਤੇ ਡਾਟਾ ਐਂਟਰੀ ਅੱਜ-ਕੱਲ੍ਹ ਬਹੁਤ ਮੰਗ ਵਿੱਚ ਹਨ।</p>
+        </div>
+
+        <h2 class="section-title">My Location</h2>
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.000000000000!2d74.88!3d31.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964aa569e7355%3A0x8f00000000000000!2sHussainpura%2C%20Amritsar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Chat</a>
@@ -100,25 +86,6 @@
             <p style="margin:0 0 5px 0; font-size: 0.8rem; color: var(--accent-color);">ਕੁੱਲ ਵਿਜ਼ਿਟਰ (Total Visitors):</p>
             <img src="https://hitwebcounter.com/counter/counter.php?page=10000001&style=0005&nbdigits=5&type=page&initCount=0" border="0" />
         </div>
-
-        <div class="disclaimer">
-            <strong>Disclaimer:</strong> ਇਹ ਵੈੱਬਸਾਈਟ ਸਿਰਫ਼ ਮਨੋਰੰਜਨ ਅਤੇ ਜਾਣਕਾਰੀ ਲਈ ਹੈ। ਸਾਰੇ ਵੀਡੀਓ ਲਿੰਕ YouTube ਦੇ ਹਨ।
-        </div>
     </div>
-
-    <script>
-        function changeLang(lang) {
-            const btnPa = document.getElementById('btn-pa');
-            const btnEn = document.getElementById('btn-en');
-            if(lang === 'en') {
-                btnEn.classList.add('active'); btnPa.classList.remove('active');
-                document.getElementById('main-name').innerText = "Gurtej Singh Sasia";
-                document.getElementById('blog-title').innerText = "Latest Blogs";
-                document.getElementById('b3-h').innerText = "3. Earning with DCA Course";
-                document.getElementById('b3-p').innerText = "DCA diploma opens many ways to earn. You can make resumes, do data entry, or work as a typist.";
-                document.getElementById('loc-title').innerText = "My Location";
-            } else { location.reload(); }
-        }
-    </script>
 </body>
 </html>
