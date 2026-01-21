@@ -1,52 +1,115 @@
 <!DOCTYPE html>
 <html lang="pa">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR47CYCWKQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RR47CYCWKQ');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurtej Singh | Maurh Movie Blog</title>
+    <title>Gurtej Singh Sasia | Official Website</title>
+    
     <style>
-        :root { --main-bg: #0f0f0f; --card-bg: #1e1e1e; --accent: #ffeb3b; }
-        body { background: var(--main-bg); color: white; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 10px; display: flex; flex-direction: column; align-items: center; }
-        .container { max-width: 500px; width: 100%; margin-top: 20px; text-align: center; }
-        .card { background: var(--card-bg); padding: 20px; border-radius: 20px; border: 1px solid #333; margin-bottom: 20px; }
-        h1 { color: var(--accent); margin: 0; font-size: 1.8rem; }
-        .section-h { border-bottom: 2px solid var(--accent); color: var(--accent); padding-bottom: 5px; margin: 20px 0; font-size: 1.2rem; }
-        .blog-item { background: #2a2a2a; padding: 15px; border-radius: 12px; margin-bottom: 15px; text-align: left; border-left: 4px solid var(--accent); }
-        .blog-item h3 { margin: 0 0 10px 0; color: #00ffcc; font-size: 1.1rem; }
-        .blog-item p { font-size: 0.9rem; color: #ccc; line-height: 1.5; }
+        :root { --accent-color: #ffeb3b; --bg-overlay: rgba(0, 0, 0, 0.9); }
+        body {
+            background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
+                              url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            margin: 0; font-family: 'Poppins', Arial, sans-serif; color: #ffffff;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .marquee-top { background: #d32f2f; color: white; padding: 10px; width: 100%; font-weight: bold; position: fixed; top: 0; z-index: 100; }
+        .lang-switch { margin-top: 60px; }
+        .lang-btn { 
+            background: rgba(255,255,255,0.1); border: 1px solid white; color: white; 
+            padding: 5px 15px; cursor: pointer; border-radius: 5px; margin: 0 5px; font-size: 0.8rem;
+        }
+        .lang-btn.active { background: var(--accent-color); color: black; font-weight: bold; }
         
-        /* YouTube Button Style */
-        .yt-btn { background: #ff0000; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; font-size: 0.9rem; }
-        .yt-btn:hover { background: #cc0000; }
+        .container {
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+            padding: 25px; border-radius: 25px; max-width: 450px; width: 90%;
+            margin: 20px auto; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 { color: var(--accent-color); margin-bottom: 5px; font-size: 1.8rem; }
+        .section-title { font-size: 1.2rem; color: var(--accent-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; margin: 20px 0; }
         
-        .btn-wa { background: #25d366; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .blog-box { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: left; }
+        .blog-post { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0; }
+        .blog-post h3 { font-size: 1.1rem; color: #00ffcc; margin: 0; }
+        .blog-post p { font-size: 0.85rem; margin: 8px 0; color: #ddd; line-height: 1.5; }
+
+        .yt-link-btn { background: #ff0000; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-size: 0.8rem; display: inline-block; font-weight: bold; }
+        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        .disclaimer { font-size: 0.7rem; color: #aaa; margin-top: 20px; padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); text-align: justify; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="card">
-        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        
-        <h2 class="section-h">LATEST BLOGS</h2>
+    <marquee class="marquee-top" id="mq-text">ਨਵੀਆਂ ਫਿਲਮਾਂ, ਗਾਣੇ ਅਤੇ ਕੰਪਿਊਟਰ ਟਿਪਸ ਪੜ੍ਹਨ ਲਈ ਹੇਠਾਂ ਦੇਖੋ।</marquee>
 
-        <div class="blog-item">
-            <h3>ਨਵੀਂ ਪੰਜਾਬੀ ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh)</h3>
-            <p>ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਇਸ ਵਿੱਚ 18ਵੀਂ ਸਦੀ ਦੇ ਪੰਜਾਬ ਦਾ ਸੱਭਿਆਚਾਰ ਅਤੇ ਉਸ ਸਮੇਂ ਦੇ ਹਾਲਾਤਾਂ ਨੂੰ ਬਹੁਤ ਵਧੀਆ ਤਰੀਕੇ ਨਾਲ ਦਿਖਾਇਆ ਗਿਆ ਹੈ।</p>
-            
-            <a href="https://www.youtube.com/watch?v=l597_3D-Gis" target="_blank" class="yt-btn">▶ YouTube 'ਤੇ ਟ੍ਰੇਲਰ ਦੇਖੋ</a>
-        </div>
-
-        <div class="blog-item">
-            <h3>ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
-            <p>ਮਕੋਕਾ ਇੱਕ ਐਕਸ਼ਨ ਭਰਪੂਰ ਫ਼ਿਲਮ ਹੈ ਜੋ ਪੰਜਾਬ ਦੇ ਗੈਂਗਸਟਰ ਕਲਚਰ 'ਤੇ ਆਧਾਰਿਤ ਹੈ।</p>
-            <a href="https://www.youtube.com/watch?v=9X5z0p5K5sY" target="_blank" class="yt-btn">▶ YouTube 'ਤੇ ਟ੍ਰੇਲਰ ਦੇਖੋ</a>
-        </div>
-
-        <h2 class="section-h">CONTACT</h2>
-        <a href="https://wa.me/918146014073" class="btn-wa">WhatsApp Chat</a>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="changeLang('pa', this)">ਪੰਜਾਬੀ</button>
+        <button class="lang-btn" onclick="changeLang('en', this)">English</button>
     </div>
-</div>
 
+    <div class="container">
+        <h1 id="main-h">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <p id="sub-h" style="color: #00ffcc; font-weight: bold;">(ਜਰਮਨ ਸਿੰਘ)</p>
+
+        <h2 class="section-title" id="sec-blogs">Latest Blogs (ਲੇਖ)</h2>
+
+        <div class="blog-box">
+            <div class="blog-post">
+                <h3 id="b1-h">1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh)</h3>
+                <p id="b1-p">ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਕਿਸ਼ਨਾ ਮੌੜ ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ।</p>
+                <a href="https://www.youtube.com/watch?v=l597_3D-Gis" class="yt-link-btn" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="blog-post">
+                <h3 id="b2-h">2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
+                <p id="b2-p">ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਨਵੀਂ ਐਕਸ਼ਨ ਅਤੇ ਡਰਾਮਾ ਫ਼ਿਲਮ।</p>
+                <a href="https://www.youtube.com/watch?v=9X5z0p5K5sY" class="yt-link-btn" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="blog-post" style="border-bottom:none;">
+                <h3 id="b3-h">3. DCA ਕੋਰਸ ਨਾਲ ਕਮਾਈ</h3>
+                <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ ਕਰਕੇ ਰਿਜ਼ਿਊਮ ਬਣਾਉਣਾ ਅਤੇ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਪੈਸੇ ਕਮਾਓ।</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="sec-loc">My Location</h2>
+        <div style="border-radius: 15px; overflow: hidden; border: 1px solid var(--accent-color);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.811902!2d74.9!3d31.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA2JzAwLjAiTiA3NMKwNTQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <a href="https://wa.me/918146014073" id="wa-btn" class="contact-btn">WhatsApp Chat</a>
+
+        <div class="disclaimer" id="disc">
+            <strong>Disclaimer:</strong> ਇਹ ਸਾਈਟ ਸਿਰਫ਼ ਜਾਣਕਾਰੀ ਲਈ ਹੈ। ਅਸੀਂ ਕੋਈ ਗੈਰ-ਕਾਨੂੰਨੀ ਕੰਟੈਂਟ ਅਪਲੋਡ ਨਹੀਂ ਕਰਦੇ। ਸਾਰੇ ਵੀਡੀਓ ਲਿੰਕ YouTube ਦੇ ਹਨ।
+        </div>
+    </div>
+
+    <script>
+        function changeLang(lang, btn) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if(lang === 'en') {
+                document.getElementById('mq-text').innerText = "Welcome! Read latest movies and computer tips below.";
+                document.getElementById('main-h').innerText = "Gurtej Singh Sasia";
+                document.getElementById('sec-blogs').innerText = "Latest Blogs";
+                document.getElementById('b3-h').innerText = "3. Earning with DCA";
+                document.getElementById('b3-p').innerText = "Earn money by making resumes and typing after computer diploma.";
+                document.getElementById('sec-loc').innerText = "My Location";
+                document.getElementById('wa-btn').innerText = "WhatsApp Chat";
+            } else {
+                location.reload(); // ਪੰਜਾਬੀ ਲਈ ਪੇਜ ਰੀਲੋਡ ਕਰਨਾ ਸਭ ਤੋਂ ਸੌਖਾ ਹੈ
+            }
+        }
+    </script>
 </body>
 </html>
