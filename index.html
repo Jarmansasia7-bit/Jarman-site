@@ -30,7 +30,7 @@
 
     <marquee class="marquee-top">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ (ਜਰਮਨ ਸਿੰਘ) ਦੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ। ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰੀਵੀਊ ਪੜੋ।</marquee>
     
-<div style="margin-top: 65px; margin-bottom: 15px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+<div style="margin-top: 65px; margin-bottom: 15px; display: flex; justify-content: center; gap: 8px;">
     <button onclick="changeLang('pa')" id="btn-pa" style="background: #ffeb3b; border: 1px solid #ffeb3b; color: black; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">ਪੰਜਾਬੀ</button>
     <button onclick="changeLang('en')" id="btn-en" style="background: rgba(255,255,255,0.15); border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">English</button>
     <button onclick="changeLang('hi')" id="btn-hi" style="background: rgba(255,255,255,0.15); border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">हिन्दी</button>
@@ -82,38 +82,64 @@
     </div>
     
 <script>
-    function changeLang(lang) {
-        // ਸਾਰੇ ਬਟਨਾਂ ਦਾ ਰੰਗ ਪਹਿਲਾਂ ਨਾਰਮਲ ਕਰੋ
-        document.getElementById('btn-pa').style.background = "rgba(255,255,255,0.15)";
-        document.getElementById('btn-en').style.background = "rgba(255,255,255,0.15)";
-        document.getElementById('btn-hi').style.background = "rgba(255,255,255,0.15)";
-        
-        // ਚੁਣੇ ਹੋਏ ਬਟਨ ਨੂੰ ਪੀਲਾ ਕਰੋ
-        document.getElementById('btn-' + lang).style.background = "#ffeb3b";
-        document.getElementById('btn-' + lang).style.color = "black";
+function changeLang(lang) {
+    // ਬਟਨਾਂ ਦੇ ਰੰਗ ਸੈੱਟ ਕਰਨਾ
+    const btns = ['pa', 'en', 'hi'];
+    btns.forEach(b => {
+        document.getElementById('btn-'+b).style.background = (b === lang) ? "#ffeb3b" : "rgba(255,255,255,0.15)";
+        document.getElementById('btn-'+b).style.color = (b === lang) ? "black" : "white";
+    });
 
-        if(lang === 'en') {
-            document.querySelector('h1').innerText = "Gurtej Singh Sasia";
-            document.getElementById('sub-nick').innerText = "(Jarman Singh)";
-            document.getElementById('blog-title').innerText = "Latest Blogs";
-            document.getElementById('b1-h').innerText = "1. Movie 'Maurh' - Review";
-            document.getElementById('b1-p').innerText = "Ammy Virk and Dev Kharoud's movie is a masterpiece of Punjabi cinema based on the life of Krishna Maurh.";
-            document.getElementById('loc-title').innerText = "My Village: Hussainpura";
-            document.querySelector('input').placeholder = "Search on Google...";
-        } 
-        else if(lang === 'hi') {
-            document.querySelector('h1').innerText = "गुरतेज सिंह सासिया";
-            document.getElementById('sub-nick').innerText = "(जर्मन सिंह)";
-            document.getElementById('blog-title').innerText = "नवीनतम लेख (Blogs)";
-            document.getElementById('b1-h').innerText = "1. फिल्म 'मौड़' (Maurh) - रिव्यू";
-            document.getElementById('b1-p').innerText = "एमी विर्क और देव खरौड़ की यह फिल्म पंजाबी सिनेमा की एक शानदार ऐतिहासिक प्रस्तुति है।";
-            document.getElementById('loc-title').innerText = "मेरा गाँव: हुसैनपुरा";
-            document.querySelector('input').placeholder = "गूगल पर खोजें...";
+    if(lang === 'pa') { location.reload(); return; }
+
+    const data = {
+        en: {
+            mq: "Welcome to Gurtej Singh Sasia's (Jarman Singh) Official Website!",
+            name: "Gurtej Singh Sasia",
+            search: "Search on Google...",
+            searchBtn: "Search",
+            blogT: "Latest Blogs",
+            b1h: "1. Movie 'Maurh' - Review",
+            b1p: "Ammy Virk and Dev Kharoud's movie 'Maurh' is a masterpiece of Punjabi cinema.",
+            b2h: "2. Movie 'Makoka' - Review",
+            b2p: "The movie 'Makoka' is full of action and suspense, highlighting system flaws.",
+            b3h: "3. Earnings through DCA Course",
+            b3p: "DCA course helps you learn MS Office and typing to earn money online.",
+            locT: "My Village: Hussainpura (148022)",
+            vst: "Total Visitors"
+        },
+        hi: {
+            mq: "गुरतेज सिंह सासिया (जर्मन सिंह) की आधिकारिक वेबसाइट पर आपका स्वागत है!",
+            name: "गुरतेज सिंह सासिया",
+            search: "गूगल पर खोजें...",
+            searchBtn: "खोजें",
+            blogT: "नवीनतम लेख (Blogs)",
+            b1h: "1. फिल्म 'मौड़' (Maurh) - रिव्यू",
+            b1p: "एमी विर्क और देव खरौड़ की फिल्म 'मौड़' पंजाबी सिनेमा की एक शानदार ऐतिहासिक फिल्म है।",
+            b2h: "2. फिल्म 'मकोका' (Makoka) - रिव्यू",
+            b2p: "फिल्म 'मकोका' एक्शन और सस्पेंस से भरपूर है, जो सिस्टम की कमियों को दिखाती है।",
+            b3h: "3. DCA कोर्स के माध्यम से कमाई",
+            b3p: "DCA कोर्स आपको MS Office और टाइपिंग सीखकर ऑनलाइन पैसे कमाने में मदद करता है।",
+            locT: "मेरा गाँव: हुसैनपुरा (148022)",
+            vst: "कुल विज़िटर"
         }
-        else {
-            location.reload(); // ਪੰਜਾਬੀ ਲਈ ਪੇਜ ਰਿਫ੍ਰੈਸ਼ ਕਰ ਦਿਓ
-        }
-    }
+    };
+
+    const translation = data[lang];
+    document.querySelector('marquee').innerText = translation.mq;
+    document.querySelector('h1').innerText = translation.name;
+    document.querySelector('.search-input').placeholder = translation.search;
+    document.querySelector('.search-btn').innerText = translation.searchBtn;
+    document.getElementById('blog-title').innerText = translation.blogT;
+    document.getElementById('b1-h').innerText = translation.b1h;
+    document.getElementById('b1-p').innerText = translation.b1p;
+    document.getElementById('b2-h').innerText = translation.b2h;
+    document.getElementById('b2-p').innerText = translation.b2p;
+    document.getElementById('b3-h').innerText = translation.b3h;
+    document.getElementById('b3-p').innerText = translation.b3p;
+    document.getElementById('loc-title').innerText = translation.locT;
+    document.getElementById('vst-txt').innerText = translation.vst;
+}
 </script>
     
 </body>
