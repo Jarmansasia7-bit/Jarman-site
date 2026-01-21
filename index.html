@@ -24,7 +24,6 @@
         }
         .marquee-top { background: #d32f2f; color: white; padding: 10px; width: 100%; font-weight: bold; position: fixed; top: 0; z-index: 1000; }
         
-        /* Language Switcher Styling */
         .lang-switch { margin-top: 65px; margin-bottom: 10px; }
         .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 6px 15px; cursor: pointer; border-radius: 8px; margin: 0 5px; font-weight: bold; font-size: 0.85rem; }
         .lang-btn.active { background: var(--accent-color); color: black; border-color: var(--accent-color); }
@@ -48,14 +47,26 @@
             display: inline-block; font-weight: bold; box-shadow: 0 4px 10px rgba(255,0,0,0.3);
         }
         
-        .map-box { border-radius: 15px; overflow: hidden; border: 1px solid #444; margin-top: 10px; }
+        /* Map Styling */
+        .map-box { border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-color); margin-top: 10px; }
+        
         .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
-        .counter-box { margin-top: 25px; padding: 10px; background: #000; border-radius: 10px; border: 1px solid var(--accent-color); display: inline-block; }
+        
+        /* Visitor Counter Button */
+        .counter-btn { 
+            margin-top: 25px; 
+            padding: 12px; 
+            background: linear-gradient(145deg, #222, #000); 
+            border-radius: 15px; 
+            border: 1px solid var(--accent-color); 
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
 
-    <marquee class="marquee-top" id="marquee-text">ਜੀ ਆਇਆਂ ਨੂੰ! ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ (ਜਰਮਨ ਸਿੰਘ) ਦੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ। ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰਿਵਿਊ ਪੜ੍ਹੋ।</marquee>
+    <marquee class="marquee-top" id="marquee-text">ਜੀ ਆਇਆਂ ਨੂੰ! ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ (ਜਰਮਨ ਸਿੰਘ) ਦੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ।</marquee>
 
     <div class="lang-switch">
         <button class="lang-btn active" id="btn-pa" onclick="changeLang('pa')">ਪੰਜਾਬੀ</button>
@@ -70,21 +81,48 @@
 
         <div class="blog-post">
             <h3 id="b1-h">1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh) - ਰਿਵਿਊ</h3>
-            <p id="b1-p">ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਇਤਿਹਾਸਕ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਮਸ਼ਹੂਰ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਜ਼ਿੰਦਗੀ ਅਤੇ ਉਸ ਦੇ ਸੰਘਰਸ਼ ਦੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਫਿਲਮ ਵਿੱਚ ਦਿਖਾਇਆ ਗਿਆ ਹੈ ਕਿ ਕਿਵੇਂ ਉਸ ਸਮੇਂ ਦੇ ਲੋਕਾਂ ਨੇ ਜ਼ੁਲਮ ਦੇ ਖਿਲਾਫ ਆਵਾਜ਼ ਉਠਾਈ। ਇਸ ਦੀ ਸਿਨੇਮੈਟੋਗ੍ਰਾਫੀ ਅਤੇ ਪੁਰਾਤਨ ਪੰਜਾਬ ਦਾ ਚਿਤਰਣ ਬਹੁਤ ਹੀ ਕਮਾਲ ਦਾ ਹੈ। ਜੇਕਰ ਤੁਸੀਂ ਇਤਿਹਾਸਕ ਫ਼ਿਲਮਾਂ ਦੇ ਸ਼ੌਕੀਨ ਹੋ, ਤਾਂ ਇਹ ਤੁਹਾਡੇ ਲਈ ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੈ।</p>
-            <a href="https://www.youtube.com/results?search_query=Maurh+Official+Trailer+Ammy+Virk" class="yt-link-btn" target="_blank">▶ Watch Trailer on YouTube</a>
+            <p id="b1-p">ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਇਤਿਹਾਸਕ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਮਸ਼ਹੂਰ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਜ਼ਿੰਦਗੀ ਅਤੇ ਉਸ ਦੇ ਸੰਘਰਸ਼ ਦੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਫਿਲਮ ਵਿੱਚ ਦਿਖਾਇਆ ਗਿਆ ਹੈ ਕਿ ਕਿਵੇਂ ਉਸ ਸਮੇਂ ਦੇ ਲੋਕਾਂ ਨੇ ਜ਼ੁਲਮ ਦੇ ਖਿਲਾਫ ਆਵਾਜ਼ ਉਠਾਈ। ਇਸ ਦੀ ਸਿਨੇਮੈਟੋਗ੍ਰਾਫੀ ਅਤੇ ਪੁਰਾਤਨ ਪੰਜਾਬ ਦਾ ਚਿਤਰਣ ਬਹੁਤ ਹੀ ਕਮਾਲ ਦਾ ਹੈ।</p>
+            <a href="https://www.youtube.com/results?search_query=Maurh+Official+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
         </div>
 
         <div class="blog-post">
             <h3 id="b2-h">2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka) - ਰਿਵਿਊ</h3>
-            <p id="b2-p">ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਵਿੱਚ ਇੱਕ ਹੋਰ ਦਮਦਾਰ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਨੇ ਕਾਫੀ ਚਰਚਾ ਛੇੜੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਪੂਰੀ ਤਰ੍ਹਾਂ ਐਕਸ਼ਨ, ਡਰਾਮੇ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਅਜੋਕੇ ਗੈਂਗਸਟਰ ਕਲਚਰ, ਸਿਆਸਤ ਅਤੇ ਸਿਸਟਮ ਦੀਆਂ ਕਮੀਆਂ ਨੂੰ ਬੜੀ ਬੇਬਾਕੀ ਨਾਲ ਪੇਸ਼ ਕਰਦੀ ਹੈ। ਫ਼ਿਲਮ ਦੇ ਕਲਾਕਾਰਾਂ ਦੀ ਅਦਾਕਾਰੀ ਅਤੇ ਬੈਕਗ੍ਰਾਊਂਡ ਮਿਊਜ਼ਿਕ ਦਰਸ਼ਕਾਂ ਨੂੰ ਅਖੀਰ ਤੱਕ ਬੰਨ੍ਹ ਕੇ ਰੱਖਦਾ ਹੈ। ਐਕਸ਼ਨ ਫਿਲਮਾਂ ਦੇ ਪ੍ਰੇਮੀਆਂ ਲਈ ਇਹ ਇੱਕ ਬਹੁਤ ਹੀ ਵਧੀਆ ਫਿਲਮ ਸਾਬਤ ਹੋਈ ਹੈ।</p>
-            <a href="https://www.youtube.com/results?search_query=Makoka+Punjabi+Movie+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer on YouTube</a>
+            <p id="b2-p">ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਵਿੱਚ ਇੱਕ ਹੋਰ ਦਮਦਾਰ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਨੇ ਕਾਫੀ ਚਰਚਾ ਛੇੜੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਪੂਰੀ ਤਰ੍ਹਾਂ ਐਕਸ਼ਨ, ਡਰਾਮੇ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਅਜੋਕੇ ਗੈਂਗਸਟਰ ਕਲਚਰ, ਸਿਆਸਤ ਅਤੇ ਸਿਸਟਮ ਦੀਆਂ ਕਮੀਆਂ ਨੂੰ ਬੜੀ ਬੇਬਾਕੀ ਨਾਲ ਪੇਸ਼ ਕਰਦੀ ਹੈ। ਐਕਸ਼ਨ ਫਿਲਮਾਂ ਦੇ ਪ੍ਰੇਮੀਆਂ ਲਈ ਇਹ ਇੱਕ ਬਹੁਤ ਹੀ ਵਧੀਆ ਫਿਲਮ ਹੈ।</p>
+            <a href="https://www.youtube.com/results?search_query=Makoka+Movie+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
         </div>
 
         <div class="blog-post">
-            <h3 id="b3-h">3. DCA ਕੋਰਸ ਰਾਹੀਂ ਆਨਲਾਈਨ ਕਮਾਈ</h3>
-            <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਅੱਜ ਦੇ ਸਮੇਂ ਵਿੱਚ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹੋ ਗਿਆ ਹੈ। ਇਸ ਕੋਰਸ ਨੂੰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ ਸਿਰਫ਼ ਸਰਕਾਰੀ ਨੌਕਰੀ ਹੀ ਨਹੀਂ, ਬਲਕਿ ਘਰ ਬੈਠੇ ਵੀ ਕਮਾਈ ਕਰ ਸਕਦੇ ਹੋ। MS Word ਵਿੱਚ ਪ੍ਰੋਫੈਸ਼ਨਲ ਦਸਤਾਵੇਜ਼ ਤਿਆਰ ਕਰਨਾ, Excel ਵਿੱਚ ਡਾਟਾ ਮੈਨੇਜਮੈਂਟ ਅਤੇ ਪੰਜਾਬੀ-ਅੰਗਰੇਜ਼ੀ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਤੁਸੀਂ ਫ੍ਰੀਲਾਂਸਿੰਗ ਪ੍ਰੋਜੈਕਟ ਲੈ ਸਕਦੇ ਹੋ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਤੁਸੀਂ ਆਪਣਾ ਸਾਈਬਰ ਕੈਫੇ ਜਾਂ ਫੋਟੋ ਸਟੂਡੀਓ ਵੀ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ। ਕੰਪਿਊਟਰ ਦੀ ਮੁੱਢਲੀ ਜਾਣਕਾਰੀ ਤੁਹਾਡੇ ਕਰੀਅਰ ਨੂੰ ਨਵੀਂਆਂ ਉਚਾਈਆਂ 'ਤੇ ਲੈ ਜਾ ਸਕਦੀ ਹੈ।</p>
+            <h3 id="b3-h">3. DCA ਕੋਰਸ ਰਾਹੀਂ ਕਮਾਈ</h3>
+            <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਅੱਜ ਦੇ ਸਮੇਂ ਵਿੱਚ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹੈ। ਇਸ ਕੋਰਸ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ MS Word, Excel ਅਤੇ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਆਨਲਾਈਨ ਫ੍ਰੀਲਾਂਸਿੰਗ ਪ੍ਰੋਜੈਕਟ ਲੈ ਸਕਦੇ ਹੋ। ਤੁਸੀਂ ਆਪਣਾ ਕੰਪਿਊਟਰ ਸੈਂਟਰ ਜਾਂ ਸਾਈਬਰ ਕੈਫੇ ਵੀ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ।</p>
         </div>
 
-        <h2 class="section-title" id="loc-title">My Location (Hussainpura 148022)</h2>
+        <h2 class="section-title" id="loc-title">My Village: Hussainpura (148022)</h2>
         <div class="map-box">
-            <iframe src="
+            <iframe src="https://www.google.com/maps/dir//Hussainpura,+Punjab,+India/data=!4m9!4m8!1m0!1m5!1m1!19sChIJU_udcWdqEDkRbCxWM9SjGk8!2m2!1d76.0312126!2d30.526864699999997!3e0" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Chat</a>
+
+        <div class="counter-btn">
+            <p style="margin:0 0 8px 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">ਵੈੱਬਸਾਈਟ ਵਿਜ਼ਿਟਰ (Total Visits)</p>
+            <img src="https://hitwebcounter.com/counter/counter.php?page=gurtejsasiasite&style=0005&nbdigits=6&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" />
+        </div>
+    </div>
+
+    <script>
+        function changeLang(lang) {
+            const btnPa = document.getElementById('btn-pa');
+            const btnEn = document.getElementById('btn-en');
+            if(lang === 'en') {
+                btnEn.classList.add('active'); btnPa.classList.remove('active');
+                document.getElementById('main-name').innerText = "Gurtej Singh Sasia";
+                document.getElementById('blog-title').innerText = "Latest Blogs";
+                document.getElementById('loc-title').innerText = "My Location";
+                document.getElementById('marquee-text').innerText = "Welcome to Gurtej Singh Sasia's (Jarman Singh) Official Website.";
+            } else {
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
