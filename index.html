@@ -11,94 +11,77 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurtej Singh Sasia | Business & Location</title>
+    <title>Gurtej Singh Sasia (Jarman) | Portfolio</title>
     
     <style>
-        :root { --accent-color: #ffeb3b; --bg-overlay: rgba(0, 0, 0, 0.92); }
+        :root { --accent-color: #ffeb3b; --bg-overlay: rgba(0, 0, 0, 0.85); }
         body {
             background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
-                              url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1920&auto=format&fit=crop');
+                              url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1920&auto=format&fit=crop');
             background-size: cover; background-position: center; background-attachment: fixed;
             margin: 0; font-family: 'Poppins', Arial, sans-serif; color: #ffffff;
-            display: flex; flex-direction: column; align-items: center; padding-bottom: 50px;
+            display: flex; flex-direction: column; min-height: 100vh;
         }
-        .lang-switch { margin-top: 20px; }
-        .lang-btn { 
-            background: rgba(255,255,255,0.1); border: 1px solid white; color: white; 
-            padding: 5px 15px; cursor: pointer; border-radius: 5px; margin: 0 5px; font-size: 0.8rem;
-        }
-        .lang-btn.active { background: var(--accent-color); color: black; font-weight: bold; }
-
+        .marquee-top { background: rgba(255, 0, 0, 0.7); color: white; padding: 10px; font-weight: bold; font-size: 1rem; }
+        .marquee-bot { background: rgba(0, 128, 0, 0.7); color: white; padding: 10px; font-weight: bold; margin-top: auto; }
+        
         .container {
             background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-            padding: 25px; border-radius: 20px; max-width: 450px; width: 90%;
-            margin: 20px auto; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px; border-radius: 25px; max-width: 400px; 
+            margin: 30px auto; text-align: center; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { color: var(--accent-color); font-size: 1.5rem; margin-bottom: 5px; }
-        .sub-link { color: #00ffcc; font-size: 0.9rem; font-weight: bold; margin-bottom: 15px; display: block; }
         
-        .rate-table { width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 0.85rem; }
-        .rate-table td { padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
-        .price { color: #00ffcc; font-weight: bold; text-align: right; }
+        h1 { color: var(--accent-color); font-size: 1.8rem; margin-bottom: 5px; }
+        .nickname { color: #00ffcc; font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; }
+        
+        .skill-container { text-align: left; margin: 15px 0; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.8rem; }
+        .progress-bar { background: rgba(255,255,255,0.1); height: 8px; border-radius: 10px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #ffeb3b, #f44336); }
+        
+        .map-box { margin-top: 20px; border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-color); line-height: 0; }
+        iframe { width: 100%; height: 180px; border: 0; }
 
-        .map-box { margin-top: 20px; border-radius: 12px; overflow: hidden; border: 2px solid var(--accent-color); background: #eee; line-height: 0; }
-        iframe { width: 100%; height: 200px; border: 0; }
-
-        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; font-size: 0.9rem; }
-        .footer-text { margin-top: 10px; font-size: 0.75rem; color: #bbb; }
+        .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        .counter-box { margin-top: 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <div class="lang-switch">
-        <button class="lang-btn active" onclick="changeLang('pa', this)">ਪੰਜਾਬੀ</button>
-        <button class="lang-btn" onclick="changeLang('en', this)">English</button>
-    </div>
+    <marquee class="marquee-top">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਮੇਰੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਜੀ ਆਇਆਂ ਨੂੰ! (ਹੁਸੈਨਪੁਰਾ, ਪੰਜਾਬ)</marquee>
 
     <div class="container">
-        <h1 id="name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        <span id="tagline" class="sub-link">Business Services & Location</span>
-        
-        <table class="rate-table">
-            <tr><td id="r1">ਰਿਜ਼ਿਊਮ ਡਿਜ਼ਾਈਨ</td><td class="price">₹150+</td></tr>
-            <tr><td id="r2">ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ</td><td class="price">₹30+</td></tr>
-            <tr><td id="r3">ਆਨਲਾਈਨ ਫਾਰਮ</td><td class="price">₹50+</td></tr>
-        </table>
+        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <div class="nickname">(ਜਰਮਨ ਸਿੰਘ)</div>
+        <p style="font-size: 0.9rem; opacity: 0.9;">DCA ਵਿਦਿਆਰਥੀ ਅਤੇ ਵੈੱਬ ਡਿਵੈਲਪਰ।</p>
+
+        <div class="skill-container">
+            <div class="skill-info"><span>HTML5 & Web Design</span><span>65%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-info"><span>MS Word (DCA)</span><span>50%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
+        </div>
 
         <div class="map-box">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13778.653456817028!2d75.877845!3d30.303649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391060677197fbd9%3A0x2f1a2394c9252c6c!2sHussainpura%2C%20Punjab%20148022!5e0!3m2!1sen!2sin!4v1705820000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13778.675664069506!2d75.8458734!3d30.3034963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39106a67719ddb53%3A0x4f182394c6162c6c!2sHussainpura%2C%20Punjab%20148022!5e0!3m2!1sen!2sin!4v1705825000000!5m2!1sen!2sin" 
                 allowfullscreen="" loading="lazy">
             </iframe>
         </div>
-        <div id="addr" class="footer-text">ਹੁਸੈਨਪੁਰਾ, ਪੰਜਾਬ 148022</div>
 
-        <a href="https://wa.me/918146014073" id="btn-text" class="contact-btn">WhatsApp Chat</a>
+        <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Chat</a>
+
+        <div class="counter-box">
+            <p>ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਵਾਲੇ: <br>
+            <img src="https://hitwebcounter.com/counter/counter.php?page=9645281&style=0005&nbdigits=5&type=page&initCount=0" border="0" /></p>
+        </div>
     </div>
 
-    <script>
-        function changeLang(lang, btn) {
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    <marquee class="marquee-bot" direction="right">ਮੇਰੀ ਵੈੱਬਸਾਈਟ ਦੇਖਣ ਲਈ ਤੁਹਾਡਾ ਬਹੁਤ-ਬਹੁਤ ਧੰਨਵਾਦ! ਸੰਪਰਕ: 8146014073</marquee>
 
-            if(lang === 'en') {
-                document.getElementById('name').innerText = "Gurtej Singh Sasia";
-                document.getElementById('tagline').innerText = "Business Services & Location";
-                document.getElementById('r1').innerText = "Resume Design";
-                document.getElementById('r2').innerText = "Punjabi Typing";
-                document.getElementById('r3').innerText = "Online Forms";
-                document.getElementById('addr').innerText = "Hussainpura, Punjab 148022";
-                document.getElementById('btn-text').innerText = "WhatsApp Chat";
-            } else {
-                document.getElementById('name').innerText = "ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ";
-                document.getElementById('tagline').innerText = "Business Services & Location";
-                document.getElementById('r1').innerText = "ਰਿਜ਼ਿਊਮ ਡਿਜ਼ਾਈਨ";
-                document.getElementById('r2').innerText = "ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ";
-                document.getElementById('r3').innerText = "ਆਨਲਾਈਨ ਫਾਰਮ";
-                document.getElementById('addr').innerText = "ਹੁਸੈਨਪੁਰਾ, ਪੰਜਾਬ 148022";
-                document.getElementById('btn-text').innerText = "WhatsApp Chat";
-            }
-        }
-    </script>
 </body>
 </html>
