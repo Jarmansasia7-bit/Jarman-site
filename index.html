@@ -24,23 +24,28 @@
         }
         .marquee-top { background: #d32f2f; color: white; padding: 10px; width: 100%; font-weight: bold; position: fixed; top: 0; z-index: 1000; }
         
+        /* Language Switcher Styling */
+        .lang-switch { margin-top: 65px; margin-bottom: 10px; }
+        .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 6px 15px; cursor: pointer; border-radius: 8px; margin: 0 5px; font-weight: bold; font-size: 0.85rem; }
+        .lang-btn.active { background: var(--accent-color); color: black; border-color: var(--accent-color); }
+
         .container { 
             background: rgba(20, 20, 20, 0.95); 
-            padding: 25px; border-radius: 20px; max-width: 480px; width: 90%; 
-            margin: 70px auto 20px auto; text-align: center; border: 1px solid #333;
+            padding: 25px; border-radius: 20px; max-width: 500px; width: 90%; 
+            margin: 10px auto 20px auto; text-align: center; border: 1px solid #333;
             box-shadow: 0 15px 35px rgba(0,0,0,0.8);
         }
         h1 { color: var(--accent-color); margin-bottom: 5px; font-size: 1.8rem; }
-        .section-title { font-size: 1.2rem; color: var(--accent-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; margin: 25px 0 15px 0; }
+        .section-title { font-size: 1.2rem; color: var(--accent-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; margin: 25px 0 15px 0; text-transform: uppercase; }
         
-        .blog-post { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; margin-bottom: 20px; text-align: left; border-left: 4px solid var(--accent-color); }
-        .blog-post h3 { color: #00ffcc; margin: 0 0 10px 0; font-size: 1.1rem; }
-        .blog-post p { font-size: 0.95rem; line-height: 1.6; color: #ddd; }
+        .blog-post { background: rgba(255,255,255,0.05); padding: 18px; border-radius: 12px; margin-bottom: 20px; text-align: left; border-left: 5px solid var(--accent-color); }
+        .blog-post h3 { color: #00ffcc; margin: 0 0 10px 0; font-size: 1.2rem; }
+        .blog-post p { font-size: 0.95rem; line-height: 1.7; color: #eee; margin-bottom: 12px; }
 
         .yt-link-btn { 
             background: #ff0000; color: white !important; padding: 10px 18px; 
             text-decoration: none; border-radius: 8px; font-size: 0.9rem; 
-            display: inline-block; font-weight: bold; margin-top: 10px;
+            display: inline-block; font-weight: bold; box-shadow: 0 4px 10px rgba(255,0,0,0.3);
         }
         
         .map-box { border-radius: 15px; overflow: hidden; border: 1px solid #444; margin-top: 10px; }
@@ -50,42 +55,36 @@
 </head>
 <body>
 
-    <marquee class="marquee-top">ਜੀ ਆਇਆਂ ਨੂੰ! ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰਿਵਿਊ ਅਤੇ ਕੰਪਿਊਟਰ ਟਿਪਸ ਲਈ ਹੇਠਾਂ ਦੇਖੋ।</marquee>
+    <marquee class="marquee-top" id="marquee-text">ਜੀ ਆਇਆਂ ਨੂੰ! ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ (ਜਰਮਨ ਸਿੰਘ) ਦੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ। ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰਿਵਿਊ ਪੜ੍ਹੋ।</marquee>
+
+    <div class="lang-switch">
+        <button class="lang-btn active" id="btn-pa" onclick="changeLang('pa')">ਪੰਜਾਬੀ</button>
+        <button class="lang-btn" id="btn-en" onclick="changeLang('en')">English</button>
+    </div>
 
     <div class="container">
-        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
-        <p style="color: #00ffcc; font-weight: bold; margin-top:0;">(ਜਰਮਨ ਸਿੰਘ)</p>
+        <h1 id="main-name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <p id="sub-name" style="color: #00ffcc; font-weight: bold; margin-top:0;">(ਜਰਮਨ ਸਿੰਘ)</p>
 
-        <h2 class="section-title">Latest Blogs (ਲੇਖ)</h2>
+        <h2 class="section-title" id="blog-title">Latest Blogs (ਲੇਖ)</h2>
 
         <div class="blog-post">
-            <h3>1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh)</h3>
-            <p>ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਇਸ ਵਿੱਚ 18ਵੀਂ ਸਦੀ ਦੇ ਪੰਜਾਬ ਦਾ ਸੱਭਿਆਚਾਰ ਦਿਖਾਇਆ ਗਿਆ ਹੈ।</p>
-            <a href="https://www.youtube.com/results?search_query=Maurh+Official+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
+            <h3 id="b1-h">1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh) - ਰਿਵਿਊ</h3>
+            <p id="b1-p">ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਇੱਕ ਸ਼ਾਨਦਾਰ ਇਤਿਹਾਸਕ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਮਸ਼ਹੂਰ ਜਿਊਣਾ ਮੌੜ ਦੇ ਭਰਾ 'ਕਿਸ਼ਨਾ ਮੌੜ' ਦੀ ਅਸਲੀ ਜ਼ਿੰਦਗੀ ਅਤੇ ਉਸ ਦੇ ਸੰਘਰਸ਼ ਦੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਫਿਲਮ ਵਿੱਚ ਦਿਖਾਇਆ ਗਿਆ ਹੈ ਕਿ ਕਿਵੇਂ ਉਸ ਸਮੇਂ ਦੇ ਲੋਕਾਂ ਨੇ ਜ਼ੁਲਮ ਦੇ ਖਿਲਾਫ ਆਵਾਜ਼ ਉਠਾਈ। ਇਸ ਦੀ ਸਿਨੇਮੈਟੋਗ੍ਰਾਫੀ ਅਤੇ ਪੁਰਾਤਨ ਪੰਜਾਬ ਦਾ ਚਿਤਰਣ ਬਹੁਤ ਹੀ ਕਮਾਲ ਦਾ ਹੈ। ਜੇਕਰ ਤੁਸੀਂ ਇਤਿਹਾਸਕ ਫ਼ਿਲਮਾਂ ਦੇ ਸ਼ੌਕੀਨ ਹੋ, ਤਾਂ ਇਹ ਤੁਹਾਡੇ ਲਈ ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੈ।</p>
+            <a href="https://www.youtube.com/results?search_query=Maurh+Official+Trailer+Ammy+Virk" class="yt-link-btn" target="_blank">▶ Watch Trailer on YouTube</a>
         </div>
 
         <div class="blog-post">
-            <h3>2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
-            <p>ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਵਿੱਚ ਇੱਕ ਹੋਰ ਦਮਦਾਰ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਰਿਲੀਜ਼ ਹੋਈ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਐਕਸ਼ਨ ਅਤੇ ਡਰਾਮੇ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਗੈਂਗਸਟਰ ਕਲਚਰ ਅਤੇ ਸਿਸਟਮ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਘੁੰਮਦੀ ਹੈ।</p>
-            <a href="https://www.youtube.com/results?search_query=Makoka+Punjabi+Movie+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer</a>
+            <h3 id="b2-h">2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka) - ਰਿਵਿਊ</h3>
+            <p id="b2-p">ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਵਿੱਚ ਇੱਕ ਹੋਰ ਦਮਦਾਰ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਨੇ ਕਾਫੀ ਚਰਚਾ ਛੇੜੀ ਹੈ। ਇਹ ਫ਼ਿਲਮ ਪੂਰੀ ਤਰ੍ਹਾਂ ਐਕਸ਼ਨ, ਡਰਾਮੇ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਅਜੋਕੇ ਗੈਂਗਸਟਰ ਕਲਚਰ, ਸਿਆਸਤ ਅਤੇ ਸਿਸਟਮ ਦੀਆਂ ਕਮੀਆਂ ਨੂੰ ਬੜੀ ਬੇਬਾਕੀ ਨਾਲ ਪੇਸ਼ ਕਰਦੀ ਹੈ। ਫ਼ਿਲਮ ਦੇ ਕਲਾਕਾਰਾਂ ਦੀ ਅਦਾਕਾਰੀ ਅਤੇ ਬੈਕਗ੍ਰਾਊਂਡ ਮਿਊਜ਼ਿਕ ਦਰਸ਼ਕਾਂ ਨੂੰ ਅਖੀਰ ਤੱਕ ਬੰਨ੍ਹ ਕੇ ਰੱਖਦਾ ਹੈ। ਐਕਸ਼ਨ ਫਿਲਮਾਂ ਦੇ ਪ੍ਰੇਮੀਆਂ ਲਈ ਇਹ ਇੱਕ ਬਹੁਤ ਹੀ ਵਧੀਆ ਫਿਲਮ ਸਾਬਤ ਹੋਈ ਹੈ।</p>
+            <a href="https://www.youtube.com/results?search_query=Makoka+Punjabi+Movie+Trailer" class="yt-link-btn" target="_blank">▶ Watch Trailer on YouTube</a>
         </div>
 
         <div class="blog-post">
-            <h3>3. DCA ਕੋਰਸ ਨਾਲ ਕਮਾਈ ਦੇ ਤਰੀਕੇ</h3>
-            <p>ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਕਰਕੇ ਤੁਸੀਂ MS Word, Excel ਅਤੇ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਵਧੀਆ ਪੈਸੇ ਕਮਾ ਸਕਦੇ ਹੋ। ਰਿਜ਼ਿਊਮ ਬਣਾਉਣਾ ਅਤੇ ਡਾਟਾ ਐਂਟਰੀ ਅੱਜ-ਕੱਲ੍ਹ ਬਹੁਤ ਮੰਗ ਵਿੱਚ ਹਨ।</p>
+            <h3 id="b3-h">3. DCA ਕੋਰਸ ਰਾਹੀਂ ਆਨਲਾਈਨ ਕਮਾਈ</h3>
+            <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਅੱਜ ਦੇ ਸਮੇਂ ਵਿੱਚ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹੋ ਗਿਆ ਹੈ। ਇਸ ਕੋਰਸ ਨੂੰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ ਸਿਰਫ਼ ਸਰਕਾਰੀ ਨੌਕਰੀ ਹੀ ਨਹੀਂ, ਬਲਕਿ ਘਰ ਬੈਠੇ ਵੀ ਕਮਾਈ ਕਰ ਸਕਦੇ ਹੋ। MS Word ਵਿੱਚ ਪ੍ਰੋਫੈਸ਼ਨਲ ਦਸਤਾਵੇਜ਼ ਤਿਆਰ ਕਰਨਾ, Excel ਵਿੱਚ ਡਾਟਾ ਮੈਨੇਜਮੈਂਟ ਅਤੇ ਪੰਜਾਬੀ-ਅੰਗਰੇਜ਼ੀ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਤੁਸੀਂ ਫ੍ਰੀਲਾਂਸਿੰਗ ਪ੍ਰੋਜੈਕਟ ਲੈ ਸਕਦੇ ਹੋ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਤੁਸੀਂ ਆਪਣਾ ਸਾਈਬਰ ਕੈਫੇ ਜਾਂ ਫੋਟੋ ਸਟੂਡੀਓ ਵੀ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ। ਕੰਪਿਊਟਰ ਦੀ ਮੁੱਢਲੀ ਜਾਣਕਾਰੀ ਤੁਹਾਡੇ ਕਰੀਅਰ ਨੂੰ ਨਵੀਂਆਂ ਉਚਾਈਆਂ 'ਤੇ ਲੈ ਜਾ ਸਕਦੀ ਹੈ।</p>
         </div>
 
-        <h2 class="section-title">My Location</h2>
+        <h2 class="section-title" id="loc-title">My Location (Hussainpura 148022)</h2>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.000000000000!2d74.88!3d31.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964aa569e7355%3A0x8f00000000000000!2sHussainpura%2C%20Amritsar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
-        <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Chat</a>
-
-        <div class="counter-box">
-            <p style="margin:0 0 5px 0; font-size: 0.8rem; color: var(--accent-color);">ਕੁੱਲ ਵਿਜ਼ਿਟਰ (Total Visitors):</p>
-            <img src="https://hitwebcounter.com/counter/counter.php?page=10000001&style=0005&nbdigits=5&type=page&initCount=0" border="0" />
-        </div>
-    </div>
-</body>
-</html>
+            <iframe src="
