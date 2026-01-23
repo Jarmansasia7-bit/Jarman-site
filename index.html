@@ -87,17 +87,20 @@
         </div>
     </div>
     
-<script>
-    
+
+    <script>
 function changeLang(lang) {
     // ਬਟਨਾਂ ਦੇ ਰੰਗ ਸੈੱਟ ਕਰਨਾ
     const btns = ['pa', 'en', 'hi'];
     btns.forEach(b => {
-        document.getElementById('btn-'+b).style.background = (b === lang) ? "#ffeb3b" : "rgba(255,255,255,0.15)";
-        document.getElementById('btn-'+b).style.color = (b === lang) ? "black" : "white";
+        const btn = document.getElementById('btn-' + b);
+        if (btn) {
+            btn.style.background = (b === lang) ? "#ffeb3b" : "rgba(255,255,255,0.15)";
+            btn.style.color = (b === lang) ? "black" : "white";
+        }
     });
 
-    if(lang === 'pa') { location.reload(); return; }
+    if (lang === 'pa') { location.reload(); return; }
 
     const data = {
         en: {
@@ -105,47 +108,49 @@ function changeLang(lang) {
             name: "Gurtej Singh Sasia",
             search: "Search on Google...",
             searchBtn: "Search",
+            nextUp: "Next Update: Jan 30, Friday",
             blogT: "Latest Blogs",
             b1h: "1. Movie 'Maurh' - Review",
             b1p: "Ammy Virk and Dev Kharoud's movie 'Maurh' is a masterpiece of Punjabi cinema.",
             b2h: "2. Movie 'Makoka' - Review",
             b2p: "The movie 'Makoka' is full of action and suspense, highlighting system flaws.",
-            b3h: "3. Earnings through DCA Course",
-            b3p: "DCA course helps you learn MS Office and typing to earn money online.",
             locT: "My Village: Hussainpura (148022)",
-            vst: "Total Visitors"
+            vst: "Total Visitors",
+            wa: "WhatsApp Chat"
         },
         hi: {
             mq: "गुरतेज सिंह सासिया (जर्मन सिंह) की आधिकारिक वेबसाइट पर आपका स्वागत है!",
             name: "गुरतेज सिंह सासिया",
             search: "गूगल पर खोजें...",
             searchBtn: "खोजें",
+            nextUp: "अगला अपडेट: 30 जनवरी, शुक्रवार को",
             blogT: "नवीनतम लेख (Blogs)",
             b1h: "1. फिल्म 'मौड़' (Maurh) - रिव्यू",
             b1p: "एमी विर्क और देव खरौड़ की फिल्म 'मौड़' पंजाबी सिनेमा की एक शानदार ऐतिहासिक फिल्म है।",
             b2h: "2. फिल्म 'मकोका' (Makoka) - रिव्यू",
             b2p: "फिल्म 'मकोका' एक्शन और सस्पेंस से भरपूर है, जो सिस्टम की कमियों को दिखाती है।",
-            b3h: "3. DCA कोर्स के माध्यम से कमाई",
-            b3p: "DCA कोर्स आपको MS Office और टाइपिंग सीखकर ऑनलाइन पैसे कमाने में मदद करता है।",
             locT: "मेरा गाँव: हुसैनपुरा (148022)",
-            vst: "कुल विज़िटर"
+            vst: "कुल विज़िटर",
+            wa: "व्हाट्सएप चैट"
         }
     };
 
-    const translation = data[lang];
-    document.querySelector('marquee').innerText = translation.mq;
-    document.querySelector('h1').innerText = translation.name;
-    document.querySelector('.search-input').placeholder = translation.search;
-    document.querySelector('.search-btn').innerText = translation.searchBtn;
-    document.getElementById('blog-title').innerText = translation.blogT;
-    document.getElementById('b1-h').innerText = translation.b1h;
-    document.getElementById('b1-p').innerText = translation.b1p;
-    document.getElementById('b2-h').innerText = translation.b2h;
-    document.getElementById('b2-p').innerText = translation.b2p;
-    document.getElementById('b3-h').innerText = translation.b3h;
-    document.getElementById('b3-p').innerText = translation.b3p;
-    document.getElementById('loc-title').innerText = translation.locT;
-    document.getElementById('vst-txt').innerText = translation.vst;
+    const t = data[lang];
+    
+    // ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਨੂੰ ਬਦਲਣਾ
+    document.getElementById('mq-main').innerText = t.mq;
+    document.getElementById('main-name').innerText = t.name;
+    document.getElementById('search-in').placeholder = t.search;
+    document.getElementById('search-bt').innerText = t.searchBtn;
+    document.getElementById('next-up-txt').innerText = t.nextUp;
+    document.getElementById('blog-title').innerText = t.blogT;
+    document.getElementById('b1-h').innerText = t.b1h;
+    document.getElementById('b1-p').innerText = t.b1p;
+    document.getElementById('b2-h').innerText = t.b2h;
+    document.getElementById('b2-p').innerText = t.b2p;
+    document.getElementById('loc-title').innerText = t.locT;
+    document.getElementById('vst-txt').innerText = t.vst;
+    document.getElementById('wa-btn').innerText = t.wa;
 }
 </script>
     
