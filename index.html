@@ -24,110 +24,126 @@
         .map-box { border-radius: 15px; overflow: hidden; border: 2px solid var(--accent); margin: 15px 0; height: 250px; background: #111; }
         .contact-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 10px; font-weight: bold; }
         .counter-box { margin-top: 25px; background: #111; padding: 15px; border-radius: 15px; border: 1px solid #333; }
+        .search-box { background: #222; padding: 10px; border-radius: 50px; border: 1px solid var(--accent); display: flex; align-items: center; margin: 20px 0; }
+        .search-input { background: transparent; border: none; color: white; padding: 8px 15px; width: 75%; outline: none; }
+        .search-btn { background: var(--accent); border: none; padding: 8px 15px; border-radius: 50px; cursor: pointer; font-weight: bold; width: 25%; color: black; }
     </style>
 </head>
 <body>
 
-    <marquee class="marquee-top">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ (ਜਰਮਨ ਸਿੰਘ) ਦੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ। ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰੀਵੀਊ ਪੜੋ।</marquee>
+    <marquee class="marquee-top" id="mq-main">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ (ਜਰਮਨ ਸਿੰਘ) ਦੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ। ਨਵੀਆਂ ਫਿਲਮਾਂ ਦੇ ਰੀਵੀਊ ਪੜੋ।</marquee>
     
-<div style="margin-top: 65px; margin-bottom: 15px; display: flex; justify-content: center; gap: 8px;">
-    <button onclick="changeLang('pa')" id="btn-pa" style="background: #ffeb3b; border: 1px solid #ffeb3b; color: black; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">ਪੰਜਾਬੀ</button>
-    <button onclick="changeLang('en')" id="btn-en" style="background: rgba(255,255,255,0.15); border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">English</button>
-    <button onclick="changeLang('hi')" id="btn-hi" style="background: rgba(255,255,255,0.15); border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">हिन्दी</button>
-</div>
+    <div style="margin-top: 65px; margin-bottom: 15px; display: flex; justify-content: center; gap: 8px;">
+        <button onclick="changeLang('pa')" id="btn-pa" style="background: var(--accent); border: 1px solid var(--accent); color: black; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">ਪੰਜਾਬੀ</button>
+        <button onclick="changeLang('en')" id="btn-en" style="background: rgba(255,255,255,0.15); border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">English</button>
+        <button onclick="changeLang('hi')" id="btn-hi" style="background: rgba(255,255,255,0.15); border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; border-radius: 8px; font-weight: bold;">हिन्दी</button>
+    </div>
     
     <div class="container">
-        <h1>ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
+        <h1 id="main-name">ਗੁਰਤੇਜ ਸਿੰਘ ਸਾਸੀਆ</h1>
         <p style="color:#00ffcc; font-weight:bold;">(ਜਰਮਨ ਸਿੰਘ)</p>
-<form action="https://www.google.com/search" method="GET" target="_blank" style="margin: 20px 0;">
-    <div style="background: #222; padding: 10px; border-radius: 50px; border: 1px solid #ffeb3b; display: flex; align-items: center;">
-        <input type="text" name="q" placeholder="ਗੂਗਲ 'ਤੇ ਸਰਚ ਕਰੋ..." required 
-            style="background: transparent; border: none; color: white; padding: 8px 15px; width: 80%; outline: none; font-size: 1rem;">
-        <button type="submit" 
-            style="background: #ffeb3b; border: none; padding: 8px 15px; border-radius: 50px; cursor: pointer; font-weight: bold; width: 25%; color: black;">
-            ਖੋਜੋ
-        </button>
-    </div>
-</form>
+
+        <form action="https://www.google.com/search" method="GET" target="_blank" class="search-box">
+            <input type="text" name="q" id="search-in" placeholder="ਗੂਗਲ 'ਤੇ ਸਰਚ ਕਰੋ..." required class="search-input">
+            <button type="submit" id="search-bt" class="search-btn">ਖੋਜੋ</button>
+        </form>
         
         <div style="background: rgba(255, 235, 59, 0.1); border: 1px dashed #ffeb3b; padding: 10px; border-radius: 10px; margin-bottom: 20px;">
-    <p style="margin: 0; font-size: 0.9rem; color: #ffeb3b; font-weight: bold;">
-        📢 <span id="next-up-txt">ਅਗਲੀ ਅਪਡੇਟ: 30 ਜਨਵਰੀ, ਸ਼ੁੱਕਰਵਾਰ ਨੂੰ</span>
-    </p>
-</div>
-        <h2 class="section-title">Latest Blogs</h2>
+            <p style="margin: 0; font-size: 0.9rem; color: #ffeb3b; font-weight: bold;">
+                📢 <span id="next-up-txt">ਅਗਲੀ ਅਪਡੇਟ: 30 ਜਨਵਰੀ, ਸ਼ੁੱਕਰਵਾਰ ਨੂੰ</span>
+            </p>
+        </div>
+
+        <h2 class="section-title" id="blog-title">Latest Blogs (ਲੇਖ)</h2>
 
         <div class="blog-post">
-            <h3>1. ਫ਼ਿਲਮ 'ਮੌਰੀ' (Maurh)</h3>
-            <p>ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਸ਼ਾਨਦਾਰ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਕਿਸ਼ਨਾ ਮੌੜ ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਫਿਲਮ ਵਿੱਚ 18ਵੀਂ ਸਦੀ ਦੇ ਪੰਜਾਬ ਨੂੰ ਬਹੁਤ ਵਧੀਆ ਢੰਗ ਨਾਲ ਦਿਖਾਇਆ ਗਿਆ ਹੈ।</p>
+            <h3 id="b1-h">1. ਫ਼ਿਲਮ 'ਮੌੜ' (Maurh)</h3>
+            <p id="b1-p">ਐਮੀ ਵਿਰਕ ਅਤੇ ਦੇਵ ਖਰੌੜ ਦੀ ਇਹ ਫ਼ਿਲਮ ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਸ਼ਾਨਦਾਰ ਪੇਸ਼ਕਾਰੀ ਹੈ। ਇਹ ਕਿਸ਼ਨਾ ਮੌੜ ਦੀ ਅਸਲੀ ਕਹਾਣੀ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਫਿਲਮ ਵਿੱਚ 18ਵੀਂ ਸਦੀ ਦੇ ਪੰਜਾਬ ਨੂੰ ਬਹੁਤ ਵਧੀਆ ਢੰਗ ਨਾਲ ਦਿਖਾਇਆ ਗਿਆ ਹੈ।</p>
             <a href="https://www.youtube.com/results?search_query=Maurh+Trailer" class="yt-btn" target="_blank">Watch Trailer</a>
         </div>
 
         <div class="blog-post">
-            <h3>2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
-            <p>ਐਕਸ਼ਨ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਇਹ ਫਿਲਮ ਅਜੋਕੇ ਸਿਸਟਮ 'ਤੇ ਚੋਟ ਕਰਦੀ ਹੈ। ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਐਕਸ਼ਨ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਅਜੋਕੇ ਗੈਂਗਸਟਰ ਕਲਚਰ ਅਤੇ ਸਿਸਟਮ ਦੀਆਂ ਕਮੀਆਂ ਨੂੰ ਪੇਸ਼ ਕਰਦੀ ਹੈ। ਐਕਸ਼ਨ ਫਿਲਮਾਂ ਦੇ ਸ਼ੌਕੀਨਾਂ ਲਈ ਇਹ ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੈ।</p>
+            <h3 id="b2-h">2. ਫ਼ਿਲਮ 'ਮਕੋਕਾ' (Makoka)</h3>
+            <p id="b2-p">ਐਕਸ਼ਨ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਇਹ ਫਿਲਮ ਅਜੋਕੇ ਸਿਸਟਮ 'ਤੇ ਚੋਟ ਕਰਦੀ ਹੈ। ਪੰਜਾਬੀ ਸਿਨੇਮਾ ਦੀ ਫ਼ਿਲਮ 'ਮਕੋਕਾ' ਐਕਸ਼ਨ ਅਤੇ ਸਸਪੈਂਸ ਨਾਲ ਭਰਪੂਰ ਹੈ। ਕਹਾਣੀ ਪੰਜਾਬ ਦੇ ਅਜੋਕੇ ਗੈਂਗਸਟਰ ਕਲਚਰ ਅਤੇ ਸਿਸਟਮ ਦੀਆਂ ਕਮੀਆਂ ਨੂੰ ਪੇਸ਼ ਕਰਦੀ ਹੈ। ਐਕਸ਼ਨ ਫਿਲਮਾਂ ਦੇ ਸ਼ੌਕੀਨਾਂ ਲਈ ਇਹ ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੈ।</p>
             <a href="https://www.youtube.com/results?search_query=Makoka+Trailer" class="yt-btn" target="_blank">Watch Trailer</a>
         </div>
 
         <div class="blog-post">
             <h3 id="b3-h">3. DCA ਕੋਰਸ ਨਾਲ ਕਮਾਈ</h3>
-            <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਅੱਜ ਦੇ ਸਮੇਂ ਵਿੱਚ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹੈ। ਇਸ ਕੋਰਸ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ MS Word, Excel ਅਤੇ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਆਨਲਾਈਨ ਫ੍ਰੀਲਾਂਸਿੰਗ ਪ੍ਰੋਜੈਕਟ ਲੈ ਸਕਦੇ ਹੋ ਜਾਂ ਆਪਣਾ ਕੰਮ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ।</p>
+            <p id="b3-p">ਕੰਪਿਊਟਰ ਡਿਪਲੋਮਾ (DCA) ਰਾਹੀਂ ਤੁਸੀਂ ਆਨਲਾਈਨ ਕੰਮ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ। ਇਸ ਕੋਰਸ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ MS Word, Excel ਅਤੇ ਟਾਈਪਿੰਗ ਰਾਹੀਂ ਆਨਲਾਈਨ ਫ੍ਰੀਲਾਂਸਿੰਗ ਪ੍ਰੋਜੈਕਟ ਲੈ ਸਕਦੇ ਹੋ ਜਾਂ ਆਪਣਾ ਕੰਮ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ</p>
         </div>
 
-        <h2 class="section-title">My Village: Hussainpura</h2>
+        <h2 class="section-title" id="loc-title">My Village: Hussainpura</h2>
         <div class="map-box">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13745.3456789!2d75.9221!3d30.6055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910609395982875%3A0xc3f587d465d64f1c!2sHussainpura%2C%20Punjab%20148022!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <a href="https://wa.me/918146014073" class="contact-btn">WhatsApp Chat</a>
+        <a href="https://wa.me/918146014073" class="contact-btn" id="wa-btn">WhatsApp Chat</a>
 
         <div class="counter-box">
-            <p style="color:var(--accent); font-weight:bold; margin-bottom:10px;">Visitors Count</p>
-            <img src="https://hitwebcounter.com/counter/counter.php?page=gurtej136&style=0005&nbdigits=6&type=page&initCount=136" border="0" />
+            <p id="vst-txt" style="color:var(--accent); font-weight:bold; margin-bottom:10px;">Visitors Count (ਵਿਜ਼ਿਟਰ)</p>
+            <img src="https://hitwebcounter.com/counter/counter.php?page=gurtej136&style=0005&nbdigits=6" border="0" />
         </div>
     </div>
-    
 
     <script>
-function changeLang(lang) {
-    if (lang === 'pa') { location.reload(); return; }
+    function changeLang(lang) {
+        if (lang === 'pa') { location.reload(); return; }
 
-    const data = {
-        en: {
-            nextUp: "Next Update: Jan 30, Friday",
-            blogT: "Latest Blogs",
-            b1h: "1. Movie 'Maurh' - Review",
-            b1p: "Ammy Virk and Dev Kharoud's movie 'Maurh' is a masterpiece of Punjabi cinema.",
-            b2h: "2. Movie 'Makoka' - Review",
-            b2p: "The movie 'Makoka' is full of action and suspense.",
-            locT: "My Village: Hussainpura",
-            vst: "Total Visitors"
-        },
-        hi: {
-            nextUp: "अगला अपडेट: 30 जनवरी, शुक्रवार को",
-            blogT: "नवीनतम लेख (Blogs)",
-            b1h: "1. फिल्म 'मौड़' (Maurh) - रिव्यू",
-            b1p: "एमी विर्क और देव खरौड़ की फिल्म 'मौड़' एक शानदार ऐतिहासिक फिल्म है।",
-            b2h: "2. फिल्म 'मकोका' (Makoka) - रिव्यू",
-            b2p: "फिल्म 'मकोका' एक्शन और सस्पेंस से भरपूर है।",
-            locT: "मेरा गाँव: हुसैनपुरा",
-            vst: "कुल विज़िटर"
-        }
-    };
+        const data = {
+            en: {
+                mq: "Welcome to Gurtej Singh Sasia's Website!",
+                name: "Gurtej Singh Sasia",
+                search: "Search on Google...",
+                searchBtn: "Search",
+                nextUp: "Next Update: Jan 30, Friday",
+                blogT: "Latest Blogs",
+                b1h: "1. Movie 'Maurh' - Review",
+                b1p: "Ammy Virk and Dev Kharoud's movie 'Maurh' is a masterpiece.",
+                b2h: "2. Movie 'Makoka' - Review",
+                b2p: "The movie 'Makoka' is full of action and suspense.",
+                b3h: "3. Earn with DCA Course",
+                b3p: "DCA course helps you to start earning money online.",
+                locT: "My Village: Hussainpura",
+                wa: "WhatsApp Chat",
+                vst: "Total Visitors"
+            },
+            hi: {
+                mq: "गुरतेज सिंह सासिया की वेबसाइट पर आपका स्वागत है!",
+                name: "गुरतेज सिंह सासिया",
+                search: "गूगल पर खोजें...",
+                searchBtn: "खोजें",
+                nextUp: "अगला अपडेट: 30 जनवरी, शुक्रवार को",
+                blogT: "नवीनतम लेख (Blogs)",
+                b1h: "1. फिल्म 'मौड़' (Maurh) - रिव्यू",
+                b1p: "एमी विर्क और देव खरौड़ की फिल्म 'मौड़' एक शानदार ऐतिहासिक फिल्म है।",
+                b2h: "2. फिल्म 'मकोका' (Makoka) - रिव्यू",
+                b2p: "फिल्म 'मकोका' एक्शन और सस्पेंस से भरपूर है।",
+                b3h: "3. DCA कोर्स से कमाएं",
+                b3p: "DCA कोर्स आपको ऑनलाइन पैसे कमाने में मदद करता है।",
+                locT: "मेरा गाँव: हुसैनपुरा",
+                wa: "व्हाट्सएप चैट",
+                vst: "कुल विज़िटर"
+            }
+        };
 
-    const t = data[lang];
-    
-    // ਇਹ ਲਾਈਨਾਂ ਪੰਜਾਬੀ ਨੂੰ ਹਟਾ ਕੇ ਦੂਜੀ ਭਾਸ਼ਾ ਲਿਖਣਗੀਆਂ
-    document.getElementById('next-up-txt').innerText = t.nextUp;
-    document.getElementById('blog-title').innerText = t.blogT;
-    document.getElementById('b1-h').innerText = t.b1h;
-    document.getElementById('b1-p').innerText = t.b1p;
-    document.getElementById('b2-h').innerText = t.b2h;
-    document.getElementById('b2-p').innerText = t.b2p;
-    document.getElementById('loc-title').innerText = t.locT;
-    document.getElementById('vst-txt').innerText = t.vst;
-}
-</script>
-    
+        const t = data[lang];
+        document.getElementById('mq-main').innerText = t.mq;
+        document.getElementById('main-name').innerText = t.name;
+        document.getElementById('search-in').placeholder = t.search;
+        document.getElementById('search-bt').innerText = t.searchBtn;
+        document.getElementById('next-up-txt').innerText = t.nextUp;
+        document.getElementById('blog-title').innerText = t.blogT;
+        document.getElementById('b1-h').innerText = t.b1h;
+        document.getElementById('b1-p').innerText = t.b1p;
+        document.getElementById('b2-h').innerText = t.b2h;
+        document.getElementById('b2-p').innerText = t.b2p;
+        document.getElementById('b3-h').innerText = t.b3h;
+        document.getElementById('b3-p').innerText = t.b3p;
+        document.getElementById('loc-title').innerText = t.locT;
+        document.getElementById('wa-btn').innerText = t.wa;
+        document.getElementById('vst-txt').innerText = t.vst;
+    }
+    </script>
 </body>
 </html>
