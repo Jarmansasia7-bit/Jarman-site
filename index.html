@@ -87,70 +87,45 @@
         </div>
     </div>
     
-<script>
-    
-function changeLang(lang) {
-    // ਸਾਰੇ ਬਟਨਾਂ ਦਾ ਰੰਗ ਪਹਿਲਾਂ ਨਾਰਮਲ ਕਰੋ
-    const btns = ['pa', 'en', 'hi'];
-    btns.forEach(b => {
-        const btn = document.getElementById('btn-' + b);
-        if (btn) {
-            btn.style.background = (b === lang) ? "#ffeb3b" : "rgba(255,255,255,0.15)";
-            btn.style.color = (b === lang) ? "black" : "white";
-        }
-    });
 
+    <script>
+function changeLang(lang) {
     if (lang === 'pa') { location.reload(); return; }
 
     const data = {
         en: {
-            mq: "Welcome to Gurtej Singh Sasia's (Jarman Singh) Official Website!",
-            name: "Gurtej Singh Sasia",
-            search: "Search on Google...",
-            searchBtn: "Search",
             nextUp: "Next Update: Jan 30, Friday",
             blogT: "Latest Blogs",
             b1h: "1. Movie 'Maurh' - Review",
             b1p: "Ammy Virk and Dev Kharoud's movie 'Maurh' is a masterpiece of Punjabi cinema.",
             b2h: "2. Movie 'Makoka' - Review",
-            b2p: "The movie 'Makoka' is full of action and suspense, highlighting system flaws.",
-            locT: "My Village: Hussainpura (148022)",
-            vst: "Total Visitors",
-            wa: "WhatsApp Chat"
+            b2p: "The movie 'Makoka' is full of action and suspense.",
+            locT: "My Village: Hussainpura",
+            vst: "Total Visitors"
         },
         hi: {
-            mq: "गुरतेज सिंह सासिया (जर्मन सिंह) की आधिकारिक वेबसाइट पर आपका स्वागत है!",
-            name: "गुरतेज सिंह सासिया",
-            search: "गूगल पर खोजें...",
-            searchBtn: "खोजें",
             nextUp: "अगला अपडेट: 30 जनवरी, शुक्रवार को",
             blogT: "नवीनतम लेख (Blogs)",
             b1h: "1. फिल्म 'मौड़' (Maurh) - रिव्यू",
-            b1p: "एमी विर्क और देव खरौड़ की फिल्म 'मौड़' पंजाबी सिनेमा की एक शानदार ऐतिहासिक फिल्म है।",
+            b1p: "एमी विर्क और देव खरौड़ की फिल्म 'मौड़' एक शानदार ऐतिहासिक फिल्म है।",
             b2h: "2. फिल्म 'मकोका' (Makoka) - रिव्यू",
-            b2p: "फिल्म 'मकोका' एक्शन और सस्पेंस से भरपूर है, जो सिस्टम की कमियों को दिखाती है।",
-            locT: "मेरा गाँव: हुसैनपुरा (148022)",
-            vst: "कुल विज़िटर",
-            wa: "व्हाट्सएप चैट"
+            b2p: "फिल्म 'मकोका' एक्शन और सस्पेंस से भरपूर है।",
+            locT: "मेरा गाँव: हुसैनपुरा",
+            vst: "कुल विज़िटर"
         }
     };
 
     const t = data[lang];
     
-    // ਹੇਠਾਂ ਦਿੱਤੇ ਸਾਰੇ ਕੰਮ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹਨ
-    if(document.getElementById('mq-main')) document.getElementById('mq-main').innerText = t.mq;
-    if(document.getElementById('main-name')) document.getElementById('main-name').innerText = t.name;
-    if(document.getElementById('search-in')) document.getElementById('search-in').placeholder = t.search;
-    if(document.getElementById('search-bt')) document.getElementById('search-bt').innerText = t.searchBtn;
-    if(document.getElementById('next-up-txt')) document.getElementById('next-up-txt').innerText = t.nextUp;
-    if(document.getElementById('blog-title')) document.getElementById('blog-title').innerText = t.blogT;
-    if(document.getElementById('b1-h')) document.getElementById('b1-h').innerText = t.b1h;
-    if(document.getElementById('b1-p')) document.getElementById('b1-p').innerText = t.b1p;
-    if(document.getElementById('b2-h')) document.getElementById('b2-h').innerText = t.b2h;
-    if(document.getElementById('b2-p')) document.getElementById('b2-p').innerText = t.b2p;
-    if(document.getElementById('loc-title')) document.getElementById('loc-title').innerText = t.locT;
-    if(document.getElementById('vst-txt')) document.getElementById('vst-txt').innerText = t.vst;
-    if(document.getElementById('wa-btn')) document.getElementById('wa-btn').innerText = t.wa;
+    // ਇਹ ਲਾਈਨਾਂ ਪੰਜਾਬੀ ਨੂੰ ਹਟਾ ਕੇ ਦੂਜੀ ਭਾਸ਼ਾ ਲਿਖਣਗੀਆਂ
+    document.getElementById('next-up-txt').innerText = t.nextUp;
+    document.getElementById('blog-title').innerText = t.blogT;
+    document.getElementById('b1-h').innerText = t.b1h;
+    document.getElementById('b1-p').innerText = t.b1p;
+    document.getElementById('b2-h').innerText = t.b2h;
+    document.getElementById('b2-p').innerText = t.b2p;
+    document.getElementById('loc-title').innerText = t.locT;
+    document.getElementById('vst-txt').innerText = t.vst;
 }
 </script>
     
