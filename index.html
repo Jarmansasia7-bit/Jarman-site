@@ -89,9 +89,8 @@
     
 <script>
     
-    <script>
 function changeLang(lang) {
-    // ਬਟਨਾਂ ਦੇ ਰੰਗ ਸੈੱਟ ਕਰਨਾ
+    // ਸਾਰੇ ਬਟਨਾਂ ਦਾ ਰੰਗ ਪਹਿਲਾਂ ਨਾਰਮਲ ਕਰੋ
     const btns = ['pa', 'en', 'hi'];
     btns.forEach(b => {
         const btn = document.getElementById('btn-' + b);
@@ -138,20 +137,20 @@ function changeLang(lang) {
 
     const t = data[lang];
     
-    // ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਨੂੰ ਬਦਲਣਾ
-    document.getElementById('mq-main').innerText = t.mq;
-    document.getElementById('main-name').innerText = t.name;
-    document.getElementById('search-in').placeholder = t.search;
-    document.getElementById('search-bt').innerText = t.searchBtn;
-    document.getElementById('next-up-txt').innerText = t.nextUp;
-    document.getElementById('blog-title').innerText = t.blogT;
-    document.getElementById('b1-h').innerText = t.b1h;
-    document.getElementById('b1-p').innerText = t.b1p;
-    document.getElementById('b2-h').innerText = t.b2h;
-    document.getElementById('b2-p').innerText = t.b2p;
-    document.getElementById('loc-title').innerText = t.locT;
-    document.getElementById('vst-txt').innerText = t.vst;
-    document.getElementById('wa-btn').innerText = t.wa;
+    // ਹੇਠਾਂ ਦਿੱਤੇ ਸਾਰੇ ਕੰਮ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹਨ
+    if(document.getElementById('mq-main')) document.getElementById('mq-main').innerText = t.mq;
+    if(document.getElementById('main-name')) document.getElementById('main-name').innerText = t.name;
+    if(document.getElementById('search-in')) document.getElementById('search-in').placeholder = t.search;
+    if(document.getElementById('search-bt')) document.getElementById('search-bt').innerText = t.searchBtn;
+    if(document.getElementById('next-up-txt')) document.getElementById('next-up-txt').innerText = t.nextUp;
+    if(document.getElementById('blog-title')) document.getElementById('blog-title').innerText = t.blogT;
+    if(document.getElementById('b1-h')) document.getElementById('b1-h').innerText = t.b1h;
+    if(document.getElementById('b1-p')) document.getElementById('b1-p').innerText = t.b1p;
+    if(document.getElementById('b2-h')) document.getElementById('b2-h').innerText = t.b2h;
+    if(document.getElementById('b2-p')) document.getElementById('b2-p').innerText = t.b2p;
+    if(document.getElementById('loc-title')) document.getElementById('loc-title').innerText = t.locT;
+    if(document.getElementById('vst-txt')) document.getElementById('vst-txt').innerText = t.vst;
+    if(document.getElementById('wa-btn')) document.getElementById('wa-btn').innerText = t.wa;
 }
 </script>
     
