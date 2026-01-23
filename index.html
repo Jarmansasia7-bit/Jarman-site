@@ -95,6 +95,8 @@
     <img src="https://count.getloli.com/get/@gurtej-singh-sasia?theme=moebooru" alt="Visitor Counter" />
 </div>     
     <script>
+        // ਭਾਸ਼ਾ ਬਦਲਣ ਤੋਂ ਬਾਅਦ ਲਾਈਕ ਬਟਨ ਨੂੰ ਦੁਬਾਰਾ ਲੋਡ ਕਰਨ ਲਈ
+if (window.lyket) { window.lyket.load(); }
     function changeLang(lang) {
         if (lang === 'pa') { location.reload(); return; }
 
@@ -153,5 +155,6 @@
         document.getElementById('vst-txt').innerText = t.vst;
     }
     </script>
+        <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js"></script>
 </body>
 </html>
